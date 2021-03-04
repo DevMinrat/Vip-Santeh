@@ -1,7 +1,17 @@
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("/app/fonts/Roboto-Regular.woff2") format("woff2"),
-    url("/app/fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "Circe-Light";
+  src: url("/assets/fonts/Circe-Light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe-Regular";
+  src: url("/assets/fonts/Circe-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe-Bold";
+  src: url("/assets/fonts/Circe-Bold.woff") format("woff");
   font-display: swap;
 }

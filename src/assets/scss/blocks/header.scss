@@ -1,3 +1,88 @@
 .header {
   position: fixed;
+  width: 100%;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 70px;
+}
+
+.header__logo-img {
+  width: 149px;
+  height: 33px;
+
+  fill: $black;
+}
+
+.header__logo-text {
+  font-family: "Exo 2", sans-serif;
+  font-size: 9.6px;
+}
+
+.menu__item-link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolut;
+    display: block;
+
+    height: 4px;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    background-color: $primary;
+
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+    transform-origin: bottom right;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.menu__list-item {
+  display: inline-block;
+
+  & + .menu__list-item {
+    margin-left: 30px;
+  }
+}
+
+.menu__item-link {
+  @include f700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 70px;
+}
+
+.header__call {
+  text-align: right;
+}
+
+.header__tel {
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
+}
+
+.header__call-order {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  color: $primary;
 }

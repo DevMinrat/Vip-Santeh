@@ -1,7 +1,16 @@
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("/app/fonts/Roboto-Regular.woff2") format("woff2"), url("/app/fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "Circe-Light";
+  src: url("/assets/fonts/Circe-Light.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Circe-Regular";
+  src: url("/assets/fonts/Circe-Regular.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Circe-Bold";
+  src: url("/assets/fonts/Circe-Bold.woff") format("woff");
   font-display: swap; }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -413,15 +422,16 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #fffefd;
-  font-family: Lato, sans-serif;
+  background-color: #ffffff;
+  font-family: "Circe-Regular", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  color: #1a212f; }
+  color: #24242e; }
 
 a {
   text-decoration: none;
-  color: #1a212f; }
+  color: #24242e; }
   a:hover {
     text-decoration: underline; }
 
@@ -992,9 +1002,79 @@ button.swiper-pagination-bullet {
 
 .container {
   width: 100%;
-  max-width: 1190px;
-  padding: 0 10px;
+  max-width: 1170px;
+  padding: 0 15px;
   margin: 0 auto; }
 
 .header {
-  position: fixed; }
+  position: fixed;
+  width: 100%; }
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; }
+
+.header__logo-img {
+  width: 149px;
+  height: 33px;
+  fill: #24242e; }
+
+.header__logo-text {
+  font-family: "Exo 2", sans-serif;
+  font-size: 9.6px; }
+
+.menu__item-link:hover {
+  text-decoration: none; }
+
+.menu__item-link::before {
+  content: "";
+  position: absolut;
+  display: block;
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #1e489b;
+  transform: scaleX(0);
+  transition: transform 0.3s linear;
+  transform-origin: bottom right; }
+
+.menu__item-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left; }
+
+.menu__list-item {
+  display: inline-block; }
+  .menu__list-item + .menu__list-item {
+    margin-left: 30px; }
+
+.menu__item-link {
+  font-family: "Circe-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 70px; }
+
+.header__call {
+  text-align: right; }
+
+.header__tel {
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  color: #24242e; }
+
+.header__call-order {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1e489b; }
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/images/intro/intro-bg.png) no-repeat center/cover; }

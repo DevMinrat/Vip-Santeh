@@ -1,5 +1,36 @@
 <header class="header">
-    <div class="header__logo">
-        <img class="header__logo-img" src="" alt="">
-    </div>
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <!-- <img class="header__logo-img" src="/assets/images/logo.svg" alt=""> -->
+                <svg class="header__logo-img">
+                    <use xlink:href="#logo"></use>
+                </svg>
+                <p class="header__logo-text">Сантехнические услуги в Москве</p>
+            </div>
+
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item active">
+                        <a class="menu__item-link" href="#">О компании</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__item-link" href="#">Наши преимущества</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__item-link" href="#">Услуги и цены</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__item-link" href="#">Проекты</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__item-link" href="#">Монтажники</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__call">
+                <a class="header__tel" href="tel:+74951082472">+7 (495) 108-24-72</a>
+                <p class="header__call-order">Заказать звонок</p>
+            </div>
+        </div>
 </header>
