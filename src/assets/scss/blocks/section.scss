@@ -1,0 +1,16 @@
+section {
+  padding: 70px 0 120px;
+}
+
+.section__title {
+  @include f700;
+  font-size: 40px;
+  line-height: 48px;
+  color: $black;
+
+  margin-bottom: 60px;
+
+  &--video {
+    max-width: 540px;
+  }
+}

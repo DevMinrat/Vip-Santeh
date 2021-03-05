@@ -27,6 +27,7 @@
     "IE 10"
   ],
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "swiper": "^6.4.15"
   }
 }

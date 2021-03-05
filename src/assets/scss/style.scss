@@ -34,11 +34,14 @@ a {
 /* Vendors */
 
 @import "vendor/swiper";
+@import "vendor/fancybox";
 
 /* Blocks */
 
 @import "blocks/page";
 @import "blocks/container";
+@import "blocks/section";
 @import "blocks/header";
 @import "blocks/intro";
+@import "blocks/video";
 @import "blocks/footer";
