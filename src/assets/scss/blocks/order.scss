@@ -1,0 +1,91 @@
+.order {
+  position: relative;
+
+  background: url(/assets/images/order/rectangles.png) $black no-repeat bottom
+    right 370px;
+
+  padding: 50px 0;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 55px;
+
+    position: absolute;
+    top: -35px;
+    left: 60%;
+    z-index: 1;
+
+    background-color: $primary;
+
+    transform: skewX(25deg);
+  }
+
+  &::after {
+    content: "";
+    width: 178px;
+    height: 174px;
+
+    position: absolute;
+    top: 23px;
+    left: 66%;
+    z-index: 1;
+
+    background: url(/assets/images/order/pipe.png) no-repeat;
+  }
+
+  &__title {
+    max-width: 815px;
+
+    @include f700;
+    font-size: 27px;
+    line-height: 32px;
+    color: $white;
+
+    margin-bottom: 40px;
+  }
+
+  &__footnote {
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+  }
+}
+
+.order__form {
+  margin-bottom: 16px;
+
+  & > * + * {
+    margin-left: 25px;
+  }
+
+  &-input {
+    width: 360px;
+    height: 70px;
+
+    padding: 20px 30px;
+
+    background: #353542;
+    border: none;
+
+    color: $white;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 27px;
+      color: $white;
+    }
+  }
+
+  &-btn {
+    width: 360px;
+    height: 70px;
+
+    background: $primary;
+    border: none;
+
+    font-size: 18px;
+    line-height: 27px;
+    color: $white;
+  }
+}

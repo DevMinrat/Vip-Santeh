@@ -1969,7 +1969,8 @@ section {
   flex-wrap: wrap; }
 
 .advantages__item {
-  display: flex; }
+  display: flex;
+  margin-bottom: 80px; }
   .advantages__item-rectangle {
     position: relative;
     width: 59px;
@@ -2000,3 +2001,63 @@ section {
   .advantages__item-text {
     font-size: 16px;
     line-height: 19px; }
+
+.order {
+  position: relative;
+  background: url(/assets/images/order/rectangles.png) #24242e no-repeat bottom right 370px;
+  padding: 50px 0; }
+  .order::before {
+    content: "";
+    width: 50px;
+    height: 55px;
+    position: absolute;
+    top: -35px;
+    left: 60%;
+    z-index: 1;
+    background-color: #1e489b;
+    transform: skewX(25deg); }
+  .order::after {
+    content: "";
+    width: 178px;
+    height: 174px;
+    position: absolute;
+    top: 23px;
+    left: 66%;
+    z-index: 1;
+    background: url(/assets/images/order/pipe.png) no-repeat; }
+  .order__title {
+    max-width: 815px;
+    font-family: "Circe-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    color: #ffffff;
+    margin-bottom: 40px; }
+  .order__footnote {
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff; }
+
+.order__form {
+  margin-bottom: 16px; }
+  .order__form > * + * {
+    margin-left: 25px; }
+  .order__form-input {
+    width: 360px;
+    height: 70px;
+    padding: 20px 30px;
+    background: #353542;
+    border: none;
+    color: #ffffff; }
+    .order__form-input::placeholder {
+      font-size: 18px;
+      line-height: 27px;
+      color: #ffffff; }
+  .order__form-btn {
+    width: 360px;
+    height: 70px;
+    background: #1e489b;
+    border: none;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff; }
