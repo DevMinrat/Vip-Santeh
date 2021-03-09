@@ -1918,7 +1918,7 @@ section {
     z-index: 1;
     width: 638px;
     height: 306px;
-    background: url(/assets/images/video/bg-lines.svg) no-repeat right; }
+    background: url(/assets/images/bg-lines.svg) no-repeat right; }
 
 .video__img {
   margin-bottom: 50px; }
@@ -2002,7 +2002,7 @@ section {
 
 .order {
   position: relative;
-  background: url(/assets/images/order/rectangles.png) #24242e no-repeat bottom right 370px;
+  background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right 370px;
   padding: 50px 0; }
   .order::before {
     content: "";
@@ -2014,15 +2014,17 @@ section {
     z-index: 1;
     background-color: #1e489b;
     transform: skewX(25deg); }
-  .order::after {
-    content: "";
-    width: 178px;
-    height: 174px;
-    position: absolute;
-    top: 23px;
-    left: 66%;
-    z-index: 1;
-    background: url(/assets/images/order/pipe.png) no-repeat; }
+  .order__inner {
+    position: relative; }
+    .order__inner::after {
+      content: "";
+      width: 178px;
+      height: 174px;
+      position: absolute;
+      top: -30px;
+      right: 100px;
+      z-index: 1;
+      background: url(/assets/images/order/pipe.png) no-repeat; }
   .order__title {
     max-width: 815px;
     font-family: "Circe-Bold", sans-serif;
@@ -2081,7 +2083,17 @@ section {
     color: #24242e; }
 
 .benefits {
-  background: #24242e; }
+  position: relative;
+  background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right 250px; }
+  .benefits::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    z-index: 1;
+    width: 638px;
+    height: 306px;
+    background: url(/assets/images/benefits/benefits-lines.svg) no-repeat right; }
   .benefits__inner {
     display: flex;
     flex-wrap: wrap; }

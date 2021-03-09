@@ -1,5 +1,21 @@
 .benefits {
-  background: $black;
+  position: relative;
+
+  background: url(/assets/images/rectangles.png) $black no-repeat bottom right
+    250px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    z-index: 1;
+
+    width: 638px;
+    height: 306px;
+
+    background: url(/assets/images/benefits/benefits-lines.svg) no-repeat right;
+  }
 
   &__inner {
     display: flex;

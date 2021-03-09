@@ -1,8 +1,8 @@
 .order {
   position: relative;
 
-  background: url(/assets/images/order/rectangles.png) $black no-repeat bottom
-    right 370px;
+  background: url(/assets/images/rectangles.png) $black no-repeat bottom right
+    370px;
 
   padding: 50px 0;
 
@@ -21,17 +21,21 @@
     transform: skewX(25deg);
   }
 
-  &::after {
-    content: "";
-    width: 178px;
-    height: 174px;
+  &__inner {
+    position: relative;
 
-    position: absolute;
-    top: 23px;
-    left: 66%;
-    z-index: 1;
+    &::after {
+      content: "";
+      width: 178px;
+      height: 174px;
 
-    background: url(/assets/images/order/pipe.png) no-repeat;
+      position: absolute;
+      top: -30px;
+      right: 100px;
+      z-index: 1;
+
+      background: url(/assets/images/order/pipe.png) no-repeat;
+    }
   }
 
   &__title {
