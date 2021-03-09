@@ -1,0 +1,45 @@
+.benefits {
+  background: $black;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 335px;
+
+    margin-bottom: 60px;
+
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 55px;
+    }
+
+    &-text {
+      font-size: 24px;
+      line-height: 29px;
+      color: $white;
+    }
+  }
+
+  &__icon {
+    width: 65px;
+    height: 65px;
+
+    fill: #9898a7;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 147px;
+      height: 147px;
+
+      border: 5px dashed #353542;
+      border-radius: 50%;
+
+      margin-bottom: 40px;
+    }
+  }
+}

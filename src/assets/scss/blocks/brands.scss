@@ -12,18 +12,18 @@
   background: #f8f8f8;
 
   padding: 28px 40px 40px 40px;
-}
 
-.brands__item-img {
-  display: flex;
-  align-items: center;
-  height: 60px;
+  &-img {
+    display: flex;
+    align-items: center;
+    height: 60px;
 
-  margin-bottom: 25px;
-}
+    margin-bottom: 25px;
+  }
 
-.brands__item-text {
-  font-size: 20px;
-  line-height: 24px;
-  color: $black;
+  &-text {
+    font-size: 20px;
+    line-height: 24px;
+    color: $black;
+  }
 }
