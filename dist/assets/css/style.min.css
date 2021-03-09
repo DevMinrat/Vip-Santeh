@@ -584,16 +584,12 @@ a {
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  top: 0;
   z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color)); }
+  justify-content: center; }
 
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -603,22 +599,17 @@ a {
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  text-transform: none;
-  font-variant: initial;
-  line-height: 1; }
+  width: 40px;
+  height: 16px;
+  background: url(/assets/images/arrow.svg) no-repeat center; }
 
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  left: 10px;
-  right: auto; }
+  right: 90px; }
 
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
-  content: "prev"; }
+  content: ""; }
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
@@ -627,7 +618,8 @@ a {
 
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
-  content: "next"; }
+  content: "";
+  transform: rotateY(180deg); }
 
 .swiper-button-prev.swiper-button-white,
 .swiper-button-next.swiper-button-white {
@@ -1753,6 +1745,9 @@ section {
     max-width: 540px; }
   .section__title--advantages {
     max-width: 720px; }
+  .section__title--brands {
+    max-width: 825px;
+    margin-bottom: 0; }
 
 .header {
   position: fixed;
@@ -2061,3 +2056,25 @@ section {
     font-size: 18px;
     line-height: 27px;
     color: #ffffff; }
+
+.brands__swiper-container {
+  padding-top: 60px; }
+
+.brands__item {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  min-height: 225px;
+  background: #f8f8f8;
+  padding: 28px 40px 40px 40px; }
+
+.brands__item-img {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 25px; }
+
+.brands__item-text {
+  font-size: 20px;
+  line-height: 24px;
+  color: #24242e; }
