@@ -29,11 +29,11 @@
 
   &-num {
     position: absolute;
-    left: 7px;
+    left: 6px;
     top: 50%;
     z-index: 1;
 
-    @include f700;
+    @include f800;
     font-size: 50px;
     color: $white;
 

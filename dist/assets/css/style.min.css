@@ -13,6 +13,11 @@
   src: url("/assets/fonts/Circe-Bold.woff") format("woff");
   font-display: swap; }
 
+@font-face {
+  font-family: "Circe-ExtraBold";
+  src: url("/assets/fonts/Circe-ExtraBold.woff") format("woff");
+  font-display: swap; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -1980,11 +1985,11 @@ section {
       background-color: #24242e; }
   .advantages__item-num {
     position: absolute;
-    left: 7px;
+    left: 6px;
     top: 50%;
     z-index: 1;
-    font-family: "Circe-Bold", sans-serif;
-    font-weight: 700;
+    font-family: "Circe-ExtraBold", sans-serif;
+    font-weight: 800;
     font-size: 50px;
     color: #ffffff;
     transform: translateY(-50%) skewX(25deg); }
@@ -2166,3 +2171,52 @@ section {
       border: 5px dashed #353542;
       border-radius: 50%;
       margin-bottom: 40px; }
+
+.guarantee {
+  background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center right 400px; }
+  .guarantee__inner {
+    display: flex;
+    justify-content: space-between; }
+
+.guarantee__item {
+  position: relative;
+  width: 25%; }
+  .guarantee__item::after {
+    content: "";
+    position: absolute;
+    left: 90px;
+    top: 45px;
+    z-index: 1;
+    width: 170px;
+    height: 38px;
+    background: url(/assets/images/line-down.svg) no-repeat center; }
+  .guarantee__item:nth-child(even) {
+    margin-top: 30px; }
+  .guarantee__item:nth-child(2)::after {
+    top: -40px;
+    background: url(/assets/images/line-up.svg) no-repeat center; }
+  .guarantee__item:last-child::after {
+    display: none; }
+
+.guarantee-item__age-num {
+  font-family: "Circe-ExtraBold", sans-serif;
+  font-weight: 800;
+  font-size: 70px;
+  color: #1e489b; }
+
+.guarantee__item-age {
+  margin-bottom: 60px; }
+
+.guarantee-item__age-text {
+  font-family: "Circe-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase; }
+
+.guarantee__item-text {
+  max-width: 180px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #24242e; }

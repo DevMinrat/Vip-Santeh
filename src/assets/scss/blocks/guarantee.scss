@@ -1,0 +1,67 @@
+.guarantee {
+  background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center
+    right 400px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.guarantee__item {
+  position: relative;
+  width: 25%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 90px;
+    top: 45px;
+    z-index: 1;
+
+    width: 170px;
+    height: 38px;
+
+    background: url(/assets/images/line-down.svg) no-repeat center;
+  }
+
+  &:nth-child(even) {
+    margin-top: 30px;
+  }
+
+  &:nth-child(2)::after {
+    top: -40px;
+
+    background: url(/assets/images/line-up.svg) no-repeat center;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.guarantee-item__age-num {
+  @include f800;
+  font-size: 70px;
+  color: $primary;
+}
+
+.guarantee__item-age {
+  margin-bottom: 60px;
+}
+
+.guarantee-item__age-text {
+  @include f700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.guarantee__item-text {
+  max-width: 180px;
+
+  font-size: 24px;
+  line-height: 29px;
+  color: $black;
+}
