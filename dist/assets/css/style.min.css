@@ -2038,22 +2038,27 @@ section {
     line-height: 17px;
     color: #ffffff; }
 
-.order__form {
+.order__form,
+.order-photo__form {
   margin-bottom: 16px; }
-  .order__form > * + * {
+  .order__form > * + *,
+  .order-photo__form > * + * {
     margin-left: 25px; }
-  .order__form-input {
+  .order__form-input,
+  .order-photo__form-input {
     width: 360px;
     height: 70px;
     padding: 20px 30px;
     background: #353542;
     border: none;
     color: #ffffff; }
-    .order__form-input::placeholder {
+    .order__form-input::placeholder,
+    .order-photo__form-input::placeholder {
       font-size: 18px;
       line-height: 27px;
       color: #ffffff; }
-  .order__form-btn {
+  .order__form-btn,
+  .order-photo__form-btn {
     width: 360px;
     height: 70px;
     background: #1e489b;
@@ -2061,6 +2066,48 @@ section {
     font-size: 18px;
     line-height: 27px;
     color: #ffffff; }
+
+.order-photo {
+  padding-top: 90px; }
+  .order-photo__title {
+    max-width: 560px;
+    font-family: "Circe-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    color: #24242e;
+    margin-bottom: 25px; }
+  .order-photo__form-input {
+    background: #f8f8f8; }
+    .order-photo__form-input::placeholder {
+      color: #24242e; }
+
+.order-photo__form-file {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  display: none; }
+
+.order-photo__label-file {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 0;
+  padding-left: 36px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1e489b; }
+  .order-photo__label-file::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 23px;
+    background: url(/assets/images/clip.png) no-repeat center; }
 
 .brands__swiper-container {
   padding-top: 60px; }

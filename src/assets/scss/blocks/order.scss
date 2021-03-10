@@ -56,7 +56,8 @@
   }
 }
 
-.order__form {
+.order__form,
+.order-photo__form {
   margin-bottom: 16px;
 
   & > * + * {
@@ -91,5 +92,67 @@
     font-size: 18px;
     line-height: 27px;
     color: $white;
+  }
+}
+
+// Order-photo styles
+
+.order-photo {
+  padding-top: 90px;
+
+  &__title {
+    max-width: 560px;
+
+    @include f700;
+    font-size: 27px;
+    line-height: 32px;
+    color: $black;
+
+    margin-bottom: 25px;
+  }
+
+  &__form-input {
+    background: #f8f8f8;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+}
+
+.order-photo__form-file {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+
+  display: none;
+}
+
+.order-photo__label-file {
+  display: block;
+  position: relative;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+  margin-left: 0;
+  padding-left: 36px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    width: 23px;
+    height: 23px;
+
+    background: url(/assets/images/clip.png) no-repeat center;
   }
 }
