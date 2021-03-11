@@ -57,7 +57,8 @@
 }
 
 .order__form,
-.order-photo__form {
+.order-photo__form,
+.order-price__form {
   margin-bottom: 16px;
 
   & > * + * {
@@ -154,5 +155,40 @@
     height: 23px;
 
     background: url(/assets/images/clip.png) no-repeat center;
+  }
+}
+
+// Order-price styles
+
+.order-price {
+  padding: 85px 0;
+
+  background: url(/assets/images/rectangles.png) $black no-repeat bottom right;
+
+  &__inner {
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      top: -100px;
+      right: 40px;
+      z-index: 1;
+
+      fill: #353542;
+
+      width: 142px;
+      height: 142px;
+    }
+  }
+
+  &__title {
+    max-width: 960px;
+
+    @include f700;
+    font-size: 27px;
+    line-height: 32px;
+    color: $white;
+
+    margin-bottom: 25px;
   }
 }
