@@ -2220,3 +2220,50 @@ section {
   font-size: 24px;
   line-height: 29px;
   color: #24242e; }
+
+.price {
+  background: #f8f8f8; }
+  .price__inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .price__item {
+    max-width: 360px;
+    padding: 35px 42px;
+    border-bottom: 9px solid #1e489b; }
+    .price__item-title {
+      font-size: 20px;
+      line-height: 24px;
+      color: #1e489b;
+      padding-bottom: 50px;
+      margin-bottom: 47px;
+      border-bottom: 3px dashed #1e489b; }
+  .price__item + .price__item {
+    margin-left: 30px; }
+
+.item-service {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 30px; }
+  .item-service__text {
+    margin-bottom: 15px; }
+  .item-service__price {
+    display: block;
+    margin-bottom: 15px;
+    font-family: "Circe-Bold", sans-serif;
+    font-weight: 700; }
+
+.price-item__button-more {
+  cursor: pointer;
+  font-family: "Circe-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e489b;
+  margin-top: 20px; }
+
+.show-less--hidden {
+  display: none; }
+
+.show-more--hidden {
+  display: none; }
