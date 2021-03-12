@@ -626,21 +626,9 @@ a {
   content: "";
   transform: rotateY(180deg); }
 
-.swiper-button-prev.swiper-button-white,
-.swiper-button-next.swiper-button-white {
-  --swiper-navigation-color: #ffffff; }
-
-.swiper-button-prev.swiper-button-black,
-.swiper-button-next.swiper-button-black {
-  --swiper-navigation-color: #000000; }
-
-.swiper-button-lock {
-  display: none; }
-
-:root {
-  /*
-  --swiper-pagination-color: var(--swiper-theme-color);
-  */ }
+.swiper-button-prev.swiper-button-prev--examples,
+.swiper-button-next.swiper-button-next--examples {
+  top: 70px; }
 
 .swiper-pagination {
   position: absolute;
@@ -1756,6 +1744,8 @@ section {
   .section__title--benefits {
     max-width: 600px;
     color: #ffffff; }
+  .section__title--examples {
+    max-width: 760px; }
 
 .header {
   position: fixed;
@@ -2294,3 +2284,56 @@ section {
 
 .show-more--hidden {
   display: none; }
+
+.examples__item {
+  display: flex; }
+  .examples__item-img {
+    width: 100%;
+    max-width: 289px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 50px; }
+    .examples__item-img-wrapper {
+      display: flex; }
+  .examples__item-title {
+    font-family: "Circe-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #24242e;
+    margin-bottom: 32px; }
+  .examples__item-content {
+    max-width: 450px;
+    margin-left: 5px; }
+
+.examples-item__descr {
+  margin-bottom: 43px; }
+  .examples-item__descr-title {
+    font-family: "Circe-Bold", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  .examples-item__descr-text {
+    list-style: none;
+    margin-bottom: 20px; }
+
+.examples-item__total {
+  border-left: 9px solid #1e489b;
+  padding: 35px 0 35px 31px; }
+  .examples-item__total-price, .examples-item__total-time {
+    position: relative;
+    padding-left: 43px; }
+    .examples-item__total-price::before, .examples-item__total-time::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: url(/assets/images/examples/price-icon.svg) no-repeat center; }
+  .examples-item__total-time {
+    margin-top: 20px; }
+    .examples-item__total-time::before {
+      background: url(/assets/images/examples/time-icon.svg) no-repeat center; }
+  .examples-item__total-text + .examples-item__total-text {
+    margin-top: 20px; }
