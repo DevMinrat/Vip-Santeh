@@ -1,0 +1,74 @@
+.installers {
+  background: #f8f8f8 url(/assets/images/rectangles-white.png) no-repeat bottom
+    right 450px;
+
+  &__inner {
+    display: flex;
+
+    margin-bottom: 30px;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 219px;
+    height: 219px;
+
+    margin-right: 55px;
+
+    border: 3px dashed $black;
+    border-radius: 50%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    & + & {
+      margin-left: 50px;
+    }
+
+    &-img {
+      width: 171px;
+      height: 171px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+    }
+
+    &-content {
+      max-width: 265px;
+
+      color: $black;
+    }
+
+    &-name {
+      font-size: 24px;
+      line-height: 29px;
+
+      margin-bottom: 20px;
+    }
+
+    &-descr {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__skillPasports {
+    &-wrapper {
+      display: inline-block;
+
+      margin-top: 26px;
+
+      border: 1px solid #000000;
+    }
+
+    &-img {
+      padding: 10px;
+    }
+  }
+}
