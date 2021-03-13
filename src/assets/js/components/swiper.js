@@ -21,5 +21,10 @@ const swiperExamples = new Swiper(
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    pagination: {
+      el: ".swiper-pagination.swiper-pagination--examples",
+      clickable: true,
+    },
   }
 );

@@ -212,9 +212,7 @@
 }
 
 .swiper-pagination {
-  position: absolute;
   text-align: center;
-  transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
@@ -229,40 +227,20 @@
   left: 0;
   width: 100%;
 }
-/* Bullets */
-.swiper-pagination-bullets-dynamic {
-  overflow: hidden;
-  font-size: 0;
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transform: scale(0.33);
-  position: relative;
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-  transform: scale(1);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-  transform: scale(1);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-  transform: scale(0.66);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-  transform: scale(0.33);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-  transform: scale(0.66);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-  transform: scale(0.33);
-}
+
 .swiper-pagination-bullet {
-  width: 8px;
+  width: 46px;
   height: 8px;
   display: inline-block;
-  border-radius: 50%;
-  background: #000;
-  opacity: 0.2;
+  background: #f8f8f8;
+
+  &:focus {
+    outline: 2px solid $black;
+  }
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: 30px;
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -278,31 +256,9 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  background: $black;
 }
-.swiper-container-vertical > .swiper-pagination-bullets {
-  right: 10px;
-  top: 50%;
-  transform: translate3d(0px, -50%, 0);
-}
-.swiper-container-vertical
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet {
-  margin: 6px 0;
-  display: block;
-}
-.swiper-container-vertical
-  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-}
-.swiper-container-vertical
-  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
-  .swiper-pagination-bullet {
-  display: inline-block;
-  transition: 200ms transform, 200ms top;
-}
+
 .swiper-container-horizontal
   > .swiper-pagination-bullets
   .swiper-pagination-bullet {
