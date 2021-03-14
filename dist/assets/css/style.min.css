@@ -1699,6 +1699,8 @@ section {
     max-width: 760px; }
   .section__title--experts {
     color: #ffffff; }
+  .section__title--counters {
+    margin-bottom: 80px; }
 
 .header {
   position: fixed;
@@ -2376,3 +2378,51 @@ section {
     border: 1px solid #000000; }
   .installers__skillPasports-img {
     padding: 10px; }
+
+.counters__inner {
+  display: flex; }
+
+.counters__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 314px;
+  min-height: 314px;
+  background: #f8f8f8;
+  padding: 0 44px; }
+  .counters__item + .counters__item {
+    margin-left: 53px; }
+  .counters__item--increased {
+    transform: scale(1.15); }
+    .counters__item--increased::before {
+      content: "";
+      position: absolute;
+      right: 35px;
+      top: -40px;
+      z-index: 1;
+      width: 98px;
+      height: 127px;
+      background: url(/assets/images/likes.svg) no-repeat top center; }
+  .counters__item-num {
+    font-family: "Circe-ExtraBold", sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 66px;
+    color: #1e489b;
+    margin-bottom: 16px; }
+    .counters__item-num--increased {
+      position: relative;
+      font-size: 70px;
+      line-height: 84px;
+      margin-bottom: 11px; }
+  .counters__item-text {
+    max-width: 200px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #24242e;
+    margin-bottom: 14px; }
+    .counters__item-text--increased {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 11px; }
