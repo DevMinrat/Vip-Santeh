@@ -28,3 +28,23 @@ const swiperExamples = new Swiper(
     },
   }
 );
+
+const swiperReviews = new Swiper(
+  ".swiper-container.reviews__swiper-container",
+  {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".swiper-pagination.swiper-pagination--reviews",
+      clickable: true,
+    },
+  }
+);

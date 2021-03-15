@@ -2063,6 +2063,10 @@ section {
     color: #ffffff;
 }
 
+.section__title--counters {
+    margin-bottom: 80px;
+}
+
 .header {
     position: fixed;
     z-index: 99;
@@ -2726,11 +2730,11 @@ section {
 .guarantee__item::after {
     content: "";
     position: absolute;
-    left: 90px;
-    top: 45px;
+    left: 91px;
+    top: 40px;
     z-index: 1;
-    width: 170px;
-    height: 38px;
+    width: 171px;
+    height: 43px;
     background: url(/assets/images/line-down.svg) no-repeat center;
 }
 
@@ -3053,4 +3057,156 @@ section {
 
 .installers__skillPasports-img {
     padding: 10px;
+}
+
+.counters__inner {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.counters__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 314px;
+    min-height: 314px;
+    background: #f8f8f8;
+    padding: 0 44px;
+}
+
+.counters__item + .counters__item {
+    margin-left: 53px;
+}
+
+.counters__item--increased {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.counters__item--increased::before {
+    content: "";
+    position: absolute;
+    right: 35px;
+    top: -40px;
+    z-index: 1;
+    width: 98px;
+    height: 127px;
+    background: url(/assets/images/likes.svg) no-repeat top center;
+}
+
+.counters__item-num {
+    font-family: "Circe-ExtraBold", sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 66px;
+    color: #1e489b;
+    margin-bottom: 16px;
+}
+
+.counters__item-num--increased {
+    position: relative;
+    font-size: 70px;
+    line-height: 84px;
+    margin-bottom: 11px;
+}
+
+.counters__item-text {
+    max-width: 200px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #24242e;
+    margin-bottom: 14px;
+}
+
+.counters__item-text--increased {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 11px;
+}
+
+.stages__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.stages__item {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    margin-bottom: 32px;
+}
+
+.stages__item + .stages__item {
+    margin-left: 30px;
+}
+
+.stages__item:nth-child(5) {
+    margin-left: 0;
+}
+
+.stages__item::after {
+    content: "";
+    position: absolute;
+    left: 95px;
+    top: 45px;
+    z-index: 1;
+    width: 171px;
+    height: 43px;
+    background: url(/assets/images/line-down.svg) no-repeat center;
+}
+
+.stages__item:nth-child(even)::after {
+    top: -10px;
+    left: 115px;
+    background: url(/assets/images/line-up.svg) no-repeat center;
+}
+
+.stages__item:last-child::after, .stages__item:nth-child(4)::after {
+    display: none;
+}
+
+.stages__item-num {
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    z-index: 1;
+    font-family: "Circe-ExtraBold", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: #ffffff;
+    -webkit-transform: skewX(25deg) translateY(-50%);
+    transform: skewX(25deg) translateY(-50%);
+}
+
+.stages__item-title {
+    font-family: "Circe-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #24242e;
+    margin-bottom: 15px;
+}
+
+.stages__item-descr {
+    font-size: 14px;
+    line-height: 17px;
+    color: #24242e;
+}
+
+.stages__num-wrapper {
+    position: relative;
+    width: 63px;
+    height: 71px;
+    margin-bottom: 23px;
+    margin-left: 17px;
+    background-color: #1e489b;
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
 }
