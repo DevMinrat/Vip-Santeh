@@ -202,3 +202,59 @@
     margin-bottom: 25px;
   }
 }
+
+.order-repair {
+  position: relative;
+
+  padding: 85px 0;
+
+  background: url(/assets/images/order/repair-bg.png) $black no-repeat bottom
+    right 250px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 55px;
+
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    z-index: 1;
+
+    background-color: $primary;
+
+    transform: skewX(25deg);
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    min-height: 220px;
+
+    &-icon {
+      position: absolute;
+      top: -100px;
+      right: 40px;
+      z-index: 1;
+
+      fill: #353542;
+
+      width: 142px;
+      height: 142px;
+    }
+  }
+
+  &__title {
+    max-width: 750px;
+
+    @include f700;
+    font-size: 27px;
+    line-height: 32px;
+    color: $white;
+
+    margin-bottom: 25px;
+  }
+}
