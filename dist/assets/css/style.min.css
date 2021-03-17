@@ -1967,7 +1967,11 @@ section {
     background-color: #1e489b;
     transform: skewX(25deg); }
   .order__inner {
-    position: relative; }
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 260px; }
     .order__inner::after {
       content: "";
       width: 178px;
@@ -2070,7 +2074,11 @@ section {
   padding: 85px 0;
   background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right; }
   .order-price__inner {
-    position: relative; }
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 260px; }
     .order-price__inner-icon {
       position: absolute;
       top: -100px;
@@ -2210,12 +2218,14 @@ section {
   .price__item {
     max-width: 360px;
     padding: 35px 42px;
-    border-bottom: 9px solid #1e489b; }
+    border-bottom: 9px solid #1e489b;
+    background-color: #ffffff; }
     .price__item-title {
+      min-height: 101px;
       font-size: 20px;
       line-height: 24px;
       color: #1e489b;
-      padding-bottom: 50px;
+      padding-bottom: 26px;
       margin-bottom: 47px;
       border-bottom: 3px dashed #1e489b; }
   .price__item + .price__item {
@@ -2246,6 +2256,10 @@ section {
   display: none; }
 
 .show-more--hidden {
+  display: none; }
+
+.hide,
+.btn-hide {
   display: none; }
 
 .examples__swiper-container {
@@ -2530,3 +2544,48 @@ section {
   margin-right: 37px;
   border: 1px solid #000000;
   border-radius: 50%; }
+
+.faq {
+  padding-top: 0;
+  background: url(/assets/images/faq/faq-bg.png) no-repeat right 200px top 110px; }
+
+.faq__item {
+  position: relative;
+  max-width: 850px;
+  background-color: #f8f8f8;
+  padding: 20px 42px 23px;
+  margin-bottom: 20px;
+  cursor: pointer; }
+  .faq__item.hidden::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 100%;
+    cursor: pointer;
+    background: url(/assets/images/faq/arrow-down.svg) no-repeat center;
+    background-color: #24242e; }
+  .faq__item.open::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 100%;
+    cursor: pointer;
+    background: url(/assets/images/faq/arrow-up.svg) no-repeat center;
+    background-color: #1e489b;
+    transform: background rotateY(22deg); }
+  .faq__item-title {
+    max-width: 710px;
+    font-size: 20px;
+    line-height: 24px; }
+  .faq__item-text {
+    max-width: 710px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; }

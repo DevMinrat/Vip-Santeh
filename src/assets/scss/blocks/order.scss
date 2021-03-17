@@ -23,6 +23,11 @@
 
   &__inner {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    min-height: 260px;
 
     &::after {
       content: "";
@@ -167,6 +172,11 @@
 
   &__inner {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    min-height: 260px;
 
     &-icon {
       position: absolute;

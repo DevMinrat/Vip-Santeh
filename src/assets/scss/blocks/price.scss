@@ -13,13 +13,16 @@
     padding: 35px 42px;
 
     border-bottom: 9px solid $primary;
+    background-color: $white;
 
     &-title {
+      min-height: 101px;
+
       font-size: 20px;
       line-height: 24px;
       color: $primary;
 
-      padding-bottom: 50px;
+      padding-bottom: 26px;
       margin-bottom: 47px;
 
       border-bottom: 3px dashed $primary;
@@ -67,5 +70,10 @@
 }
 
 .show-more--hidden {
+  display: none;
+}
+
+.hide,
+.btn-hide {
   display: none;
 }

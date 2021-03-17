@@ -8,6 +8,7 @@ const removeComments = require("gulp-strip-css-comments");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const cssnano = require("gulp-cssnano");
+const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const rigger = require("gulp-rigger");
 const plumber = require("gulp-plumber");
@@ -146,6 +147,11 @@ function js(cb) {
         },
       })
     )
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"],
+      })
+    )
     .pipe(rigger())
     .pipe(gulp.dest(path.build.js))
     .pipe(uglify())
@@ -172,6 +178,11 @@ function jsWatch(cb) {
           })(err);
           this.emit("end");
         },
+      })
+    )
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"],
       })
     )
     .pipe(rigger())

@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -15143,73 +15145,106 @@
   });
 })(document, jQuery);
 
-$(function () {
-  const swiper = new Swiper(".swiper-container.brands__swiper-container", {
+const swiper = new Swiper(".swiper-container.brands__swiper-container", {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const swiperExamples = new Swiper(
+  ".swiper-container.examples__swiper-container",
+  {
     loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
-  
+    slidesPerView: 1,
+
     // Navigation arrows
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
-  
-  const swiperExamples = new Swiper(
-    ".swiper-container.examples__swiper-container",
-    {
-      loop: true,
-      slidesPerView: 1,
-  
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  
-      pagination: {
-        el: ".swiper-pagination.swiper-pagination--examples",
-        clickable: true,
-      },
-    }
-  );
-  
-  const swiperReviews = new Swiper(
-    ".swiper-container.reviews__swiper-container",
-    {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: 30,
-  
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  
-      pagination: {
-        el: ".swiper-pagination.swiper-pagination--reviews",
-        clickable: true,
-      },
-    }
-  );
-  
 
-  // input-file
-  let inputs = document.querySelectorAll("#input__file");
-  Array.prototype.forEach.call(inputs, function (input) {
-    let label = input.nextElementSibling,
+    pagination: {
+      el: ".swiper-pagination.swiper-pagination--examples",
+      clickable: true,
+    },
+  }
+);
+
+const swiperReviews = new Swiper(
+  ".swiper-container.reviews__swiper-container",
+  {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".swiper-pagination.swiper-pagination--reviews",
+      clickable: true,
+    },
+  }
+);
+// input-file
+var inputs = document.querySelectorAll("#input__file");
+Array.prototype.forEach.call(inputs, function (input) {
+  var label = input.nextElementSibling,
       labelVal = label.querySelector(".input__file-button-text").innerText;
+  input.addEventListener("change", function (e) {
+    var countFiles = "";
+    if (this.files && this.files.length >= 1) countFiles = this.files.length;
+    if (countFiles) label.querySelector(".input__file-button-text").innerText = "Выбрано файлов: " + countFiles;else label.querySelector(".input__file-button-text").innerText = labelVal;
+  });
+}); //price show more
 
-    input.addEventListener("change", function (e) {
-      let countFiles = "";
-      if (this.files && this.files.length >= 1) countFiles = this.files.length;
+var priceShowBtn = document.querySelectorAll(".show-more"),
+    priceHideBtn = document.querySelectorAll(".show-less"),
+    priceBtnParent = document.querySelectorAll(".price-item__button-more"),
+    hidenServices = document.querySelectorAll(".hiden-services");
 
-      if (countFiles)
-        label.querySelector(".input__file-button-text").innerText =
-          "Выбрано файлов: " + countFiles;
-      else label.querySelector(".input__file-button-text").innerText = labelVal;
-    });
+function changePriceBtn(i) {
+  priceHideBtn[i].classList.toggle("btn-hide");
+  priceShowBtn[i].classList.toggle("btn-hide");
+}
+
+priceBtnParent.forEach(function (item, i) {
+  item.addEventListener("click", function () {
+    changePriceBtn(i);
+
+    if (priceBtnParent[i].classList.contains("priceBtn".concat(i + 1))) {
+      hidenServices[i].classList.toggle("hide");
+    }
+  });
+}); // faq accordion
+
+var faqItems = document.querySelectorAll(".faq__item"),
+    faqItemTitle = document.querySelectorAll(".faq__item-title"),
+    faqItemText = document.querySelectorAll(".faq__item-text");
+
+function changeAfterEffects(i) {
+  faqItems[i].classList.toggle("hidden");
+  faqItems[i].classList.toggle("open");
+}
+
+faqItems.forEach(function (item, i) {
+  var hiddenText = item.lastElementChild;
+  item.addEventListener("click", function () {
+    changeAfterEffects(i);
+
+    if (hiddenText.style.maxHeight) {
+      hiddenText.style.maxHeight = null;
+    } else {
+      hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
+    }
   });
 });
