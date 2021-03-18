@@ -1,0 +1,76 @@
+.footer {
+  height: 145px;
+
+  background-color: $black;
+
+  &__inner {
+    height: 145px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 210px;
+      height: 35px;
+
+      padding-right: 53px;
+
+      fill: $white;
+    }
+
+    &-text {
+      position: relative;
+
+      font-size: 15px;
+      color: $white;
+
+      padding-left: 39px;
+      padding-top: 6px;
+      margin-top: 6px;
+
+      &::before {
+        content: "";
+        width: 2px;
+        height: 28px;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+
+        transform: translateY(-50%);
+
+        background-color: $white;
+      }
+    }
+  }
+
+  &__social {
+    &-link {
+      & + & {
+        margin-left: 60px;
+      }
+    }
+
+    &-icon {
+      fill: $white;
+
+      &--vk,
+      &--youtube {
+        width: 31px;
+        height: 31px;
+      }
+
+      &--inst {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
