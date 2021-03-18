@@ -1,0 +1,45 @@
+.contacts__inner {
+  display: flex;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 360px;
+  height: 360px;
+
+  background-color: #f8f8f8;
+
+  padding: 49px 40px 51px;
+
+  & + & {
+    margin-left: 30px;
+  }
+
+  &-icon {
+    width: 80px;
+    height: 80px;
+
+    fill: transparent;
+    stroke: $primary;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 17px;
+
+    margin-bottom: 30px;
+  }
+
+  &-link {
+    font-size: 24px;
+    line-height: 29px;
+
+    &--mail,
+    &--site {
+      color: $primary;
+    }
+  }
+}

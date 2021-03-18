@@ -15241,10 +15241,12 @@ faqItems.forEach(function (item, i) {
   item.addEventListener("click", function () {
     changeAfterEffects(i);
 
-    if (hiddenText.style.maxHeight) {
+    if (hiddenText.style.maxHeight && hiddenText.style.marginTop) {
       hiddenText.style.maxHeight = null;
+      hiddenText.style.marginTop = null;
     } else {
       hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
+      hiddenText.style.marginTop = "18px";
     }
   });
 });

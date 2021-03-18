@@ -2622,7 +2622,35 @@ section {
     max-width: 710px;
     font-size: 14px;
     line-height: 17px;
-    margin-top: 18px;
+    margin-top: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out; }
+    transition: all 0.2s ease-out; }
+
+.contacts__inner {
+  display: flex; }
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 360px;
+  height: 360px;
+  background-color: #f8f8f8;
+  padding: 49px 40px 51px; }
+  .contacts__item + .contacts__item {
+    margin-left: 30px; }
+  .contacts__item-icon {
+    width: 80px;
+    height: 80px;
+    fill: transparent;
+    stroke: #1e489b; }
+  .contacts__item-text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 30px; }
+  .contacts__item-link {
+    font-size: 24px;
+    line-height: 29px; }
+    .contacts__item-link--mail, .contacts__item-link--site {
+      color: #1e489b; }
