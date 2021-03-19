@@ -15195,58 +15195,72 @@ const swiperReviews = new Swiper(
     },
   }
 );
-// input-file
-var inputs = document.querySelectorAll("#input__file");
-Array.prototype.forEach.call(inputs, function (input) {
-  var label = input.nextElementSibling,
-      labelVal = label.querySelector(".input__file-button-text").innerText;
-  input.addEventListener("change", function (e) {
-    var countFiles = "";
-    if (this.files && this.files.length >= 1) countFiles = this.files.length;
-    if (countFiles) label.querySelector(".input__file-button-text").innerText = "Выбрано файлов: " + countFiles;else label.querySelector(".input__file-button-text").innerText = labelVal;
-  });
-}); //price show more
+window.addEventListener("DOMContentLoaded", function () {
+  // input-file
+  var inputs = document.querySelectorAll("#input__file");
+  Array.prototype.forEach.call(inputs, function (input) {
+    var label = input.nextElementSibling,
+        labelVal = label.querySelector(".input__file-button-text").innerText;
+    input.addEventListener("change", function (e) {
+      var countFiles = "";
+      if (this.files && this.files.length >= 1) countFiles = this.files.length;
+      if (countFiles) label.querySelector(".input__file-button-text").innerText = "Выбрано файлов: " + countFiles;else label.querySelector(".input__file-button-text").innerText = labelVal;
+    });
+  }); //price show more
 
-var priceShowBtn = document.querySelectorAll(".show-more"),
-    priceHideBtn = document.querySelectorAll(".show-less"),
-    priceBtnParent = document.querySelectorAll(".price-item__button-more"),
-    hidenServices = document.querySelectorAll(".hiden-services");
+  var priceShowBtn = document.querySelectorAll(".show-more"),
+      priceHideBtn = document.querySelectorAll(".show-less"),
+      priceBtnParent = document.querySelectorAll(".price-item__button-more"),
+      hidenServices = document.querySelectorAll(".hiden-services");
 
-function changePriceBtn(i) {
-  priceHideBtn[i].classList.toggle("btn-hide");
-  priceShowBtn[i].classList.toggle("btn-hide");
-}
+  function changePriceBtn(i) {
+    priceHideBtn[i].classList.toggle("btn-hide");
+    priceShowBtn[i].classList.toggle("btn-hide");
+  }
 
-priceBtnParent.forEach(function (item, i) {
-  item.addEventListener("click", function () {
-    changePriceBtn(i);
+  priceBtnParent.forEach(function (item, i) {
+    item.addEventListener("click", function () {
+      changePriceBtn(i);
 
-    if (priceBtnParent[i].classList.contains("priceBtn".concat(i + 1))) {
-      hidenServices[i].classList.toggle("hide");
-    }
-  });
-}); // faq accordion
+      if (priceBtnParent[i].classList.contains("priceBtn".concat(i + 1))) {
+        hidenServices[i].classList.toggle("hide");
+      }
+    });
+  }); // faq accordion
 
-var faqItems = document.querySelectorAll(".faq__item"),
-    faqItemTitle = document.querySelectorAll(".faq__item-title"),
-    faqItemText = document.querySelectorAll(".faq__item-text");
+  var faqItems = document.querySelectorAll(".faq__item");
 
-function changeAfterEffects(i) {
-  faqItems[i].classList.toggle("hidden");
-  faqItems[i].classList.toggle("open");
-}
+  function changeAfterEffects(i) {
+    faqItems[i].classList.toggle("hidden");
+    faqItems[i].classList.toggle("open");
+  }
 
-faqItems.forEach(function (item, i) {
-  var hiddenText = item.lastElementChild;
-  item.addEventListener("click", function () {
-    changeAfterEffects(i);
+  faqItems.forEach(function (item, i) {
+    var hiddenText = item.lastElementChild;
+    item.addEventListener("click", function () {
+      changeAfterEffects(i);
 
-    if (hiddenText.style.maxHeight && hiddenText.style.marginTop) {
-      hiddenText.style.maxHeight = null;
-      hiddenText.style.marginTop = null;
+      if (hiddenText.style.maxHeight && hiddenText.style.marginTop) {
+        hiddenText.style.maxHeight = null;
+        hiddenText.style.marginTop = null;
+      } else {
+        hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
+        hiddenText.style.marginTop = "18px";
+      }
+    });
+  }); //burger menu
+
+  var burgerMenu = document.querySelector(".burger-menu"),
+      menu = document.querySelector(".menu");
+  burgerMenu.addEventListener("click", function () {
+    burgerMenu.classList.toggle("menu-on");
+
+    if (menu.style.height && menu.style.padding) {
+      menu.style.height = null;
+      menu.style.padding = null;
     } else {
-      hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
-      hiddenText.style.marginTop = "18px";
+      menu.style.height = 100 + "vh";
+      menu.style.padding = 20 + "px";
     }
   });
 });

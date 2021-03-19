@@ -6,11 +6,17 @@
 }
 
 .header__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  height: 70px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  height: 70px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header__logo-img {
@@ -25,54 +31,164 @@
   font-size: 9.6px;
 }
 
-.menu__item-link {
-  &:hover {
-    text-decoration: none;
+.header__logo--mobile {
+  display: none;
+
+  @include breakpoint(1100px) {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.logo-mobile {
+  width: 137px;
+  height: 30px;
+
+  fill: $white;
+}
+
+.menu {
+  &__list-item {
+    display: inline-block;
+
+    & + & {
+      margin-left: 30px;
+
+      @include breakpoint(1100px) {
+        margin-left: 0;
+      }
+    }
   }
 
-  &::before {
-    content: "";
-    position: absolut;
-    display: block;
+  &__item-link {
+    @include f700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 70px;
 
-    height: 4px;
+    &:hover {
+      text-decoration: none;
+    }
 
-    left: 0;
-    right: 0;
-    bottom: 0;
+    &::before {
+      content: "";
+      position: absolut;
+      display: block;
+
+      height: 4px;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+
+      background-color: $primary;
+
+      transform: scaleX(0);
+      transition: transform 0.3s linear;
+      transform-origin: bottom right;
+
+      @include breakpoint(1100px) {
+        display: none;
+      }
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  @include breakpoint(1100px) {
+    overflow: hidden;
+
+    position: absolute;
     top: 0;
+    left: 0;
+    z-index: 99;
+
+    height: 0;
+    width: 100vw;
+
+    padding: 0px;
+    padding-left: 20px;
+
+    transition: all 0.3s linear;
 
     background-color: $primary;
 
-    transform: scaleX(0);
-    transition: transform 0.3s linear;
-    transform-origin: bottom right;
-  }
+    &__list {
+      display: flex;
+      flex-direction: column;
 
-  &:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-}
+      margin-bottom: 40px;
+    }
 
-.menu__list-item {
-  display: inline-block;
+    &__item-link {
+      color: $white;
 
-  & + .menu__list-item {
-    margin-left: 30px;
+      line-height: 50px;
+    }
   }
 }
 
-.menu__item-link {
-  @include f700;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 70px;
+.mobile-menu__social {
+  display: none;
+
+  @include breakpoint(1100px) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+
+    &-link {
+      & + & {
+        margin-left: 60px;
+      }
+    }
+
+    &-icon {
+      fill: $white;
+
+      &--vk,
+      &--youtube {
+        width: 31px;
+        height: 31px;
+      }
+
+      &--inst {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.mobile-menu__order-btn {
+  display: none;
+
+  @include breakpoint(1100px) {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: 70px;
+
+    font-size: 16px;
+    line-height: 69px;
+    color: $primary;
+
+    background-color: $white;
+
+    border: none;
+  }
 }
 
 .header__call {
   text-align: right;
+
+  @include breakpoint(1100px) {
+    display: none;
+  }
 }
 
 .header__tel {
@@ -87,4 +203,66 @@
   font-size: 14px;
   line-height: 21px;
   color: $primary;
+}
+
+//burger menu
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  right: 25px;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+
+  @include breakpoint(1100px) {
+    display: block;
+  }
+}
+
+.burger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  position: absolute;
+  right: 0;
+  z-index: 999;
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: $black;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger::before {
+  content: "";
+  top: 7px;
+  width: 130%;
+}
+
+.burger::after {
+  content: "";
+  bottom: 7px;
+  width: 130%;
+}
+
+.burger-menu.menu-on .burger::after {
+  transform: rotate(-45deg);
+  bottom: 0px;
+
+  background-color: $white;
+}
+.burger-menu.menu-on .burger::before {
+  transform: rotate(45deg);
+  top: 0px;
+
+  background-color: $white;
+}
+.burger-menu.menu-on .burger {
+  background: rgba($black, 0);
 }
