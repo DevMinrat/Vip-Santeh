@@ -1677,6 +1677,12 @@ body.compensate-for-scrollbar {
 
 section {
   padding: 70px 0 120px; }
+  @media (max-width: 850px) {
+    section {
+      padding: 60px 0 50px; } }
+  @media (max-width: 450px) {
+    section {
+      padding: 50px 0 20px; } }
 
 .section__title {
   font-family: "Circe-Bold", sans-serif;
@@ -1685,6 +1691,14 @@ section {
   line-height: 48px;
   color: #24242e;
   margin-bottom: 60px; }
+  @media (max-width: 850px) {
+    .section__title {
+      font-size: 35px;
+      line-height: 35px; } }
+  @media (max-width: 450px) {
+    .section__title {
+      font-size: 27px;
+      line-height: 32px; } }
   .section__title--video {
     max-width: 540px; }
   .section__title--advantages {
@@ -1708,6 +1722,10 @@ section {
   position: fixed;
   z-index: 99;
   width: 100%; }
+  @media (max-width: 1100px) {
+    .header {
+      display: block;
+      background-color: #ffffff; } }
 
 .header__inner {
   position: relative;
@@ -1916,6 +1934,16 @@ section {
   color: #24242e;
   margin-top: 136px;
   margin-bottom: 22px; }
+  @media (max-width: 850px) {
+    .intro__title {
+      font-size: 35px;
+      margin-top: 60px; } }
+  @media (max-width: 450px) {
+    .intro__title {
+      max-width: 230px;
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 50px; } }
 
 .intro__title-span {
   font-family: "Circe-Bold", sans-serif;
@@ -1928,16 +1956,33 @@ section {
   line-height: 27px;
   color: #24242e;
   margin-bottom: 52px; }
+  @media (max-width: 450px) {
+    .intro__subtitle {
+      max-width: 200px;
+      font-size: 16px;
+      line-height: 19px; } }
 
 .intro__features {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 122px; }
+  @media (max-width: 850px) {
+    .intro__features {
+      margin-bottom: 0px; } }
 
 .intro__features-item {
   display: flex;
   align-items: center; }
   .intro__features-item + .intro__features-item {
     margin-left: 60px; }
+    @media (max-width: 850px) {
+      .intro__features-item + .intro__features-item {
+        margin-left: 15px; } }
+  @media (max-width: 850px) {
+    .intro__features-item {
+      width: 100%;
+      margin-left: 15px;
+      margin-bottom: 55px; } }
 
 .features-item__icon {
   position: relative;
@@ -1986,6 +2031,9 @@ section {
   background-color: #1e489b;
   border: none;
   padding: 21px 60px; }
+  @media (max-width: 850px) {
+    .intro__btn {
+      display: none; } }
 
 .video__inner {
   position: relative; }
@@ -1998,9 +2046,17 @@ section {
     width: 638px;
     height: 306px;
     background: url(/assets/images/bg-lines.svg) no-repeat right; }
+    @media (max-width: 850px) {
+      .video__inner::after {
+        display: none; } }
+
+.video__img-wrapper {
+  margin-bottom: 50px; }
 
 .video__img {
-  margin-bottom: 50px; }
+  width: 100%;
+  max-width: 750px;
+  height: auto; }
 
 .play-btn__wrapper {
   position: absolute;
@@ -2011,6 +2067,20 @@ section {
   height: 149px;
   background: #24242e;
   transform: translateY(-60%) skewX(-25deg); }
+  @media (max-width: 850px) {
+    .play-btn__wrapper {
+      left: 50%;
+      width: 100px;
+      height: 120px;
+      transform: translate(-50%, -50%) skewX(-25deg); } }
+  @media (max-width: 575px) {
+    .play-btn__wrapper {
+      width: 68px;
+      height: 75px; } }
+  @media (max-width: 450px) {
+    .play-btn__wrapper {
+      width: 48px;
+      height: 55px; } }
   .play-btn__wrapper::before {
     content: "";
     position: absolute;
@@ -2019,6 +2089,9 @@ section {
     width: 71px;
     height: 81px;
     background-color: #dcdcdc; }
+    @media (max-width: 850px) {
+      .play-btn__wrapper::before {
+        display: none; } }
 
 .play-btn__icon {
   position: absolute;
@@ -2029,8 +2102,17 @@ section {
   height: 35px;
   fill: #ffffff;
   transform: translate(-50%, -50%) skewX(25deg); }
+  @media (max-width: 575px) {
+    .play-btn__icon {
+      width: 21px;
+      height: 29px; } }
+  @media (max-width: 450px) {
+    .play-btn__icon {
+      width: 16px;
+      height: 12px; } }
 
 .video__btn {
+  width: 100%;
   max-width: 261px;
   height: 70px;
   font-size: 18px;
@@ -2039,6 +2121,12 @@ section {
   background-color: #1e489b;
   border: none;
   padding: 21px 60px; }
+  @media (max-width: 850px) {
+    .video__btn {
+      display: block;
+      max-width: 345px;
+      font-size: 16px;
+      margin: 0 auto; } }
 
 .advantages__inner {
   display: flex;

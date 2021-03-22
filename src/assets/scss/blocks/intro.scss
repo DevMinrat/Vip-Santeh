@@ -20,6 +20,21 @@
 
   margin-top: 136px;
   margin-bottom: 22px;
+
+  @include breakpoint($md-bp) {
+    font-size: 35px;
+
+    margin-top: 60px;
+  }
+
+  @include breakpoint($xs-bp) {
+    max-width: 230px;
+
+    font-size: 25px;
+    line-height: 30px;
+
+    margin-top: 50px;
+  }
 }
 
 .intro__title-span {
@@ -35,12 +50,24 @@
   color: $black;
 
   margin-bottom: 52px;
+
+  @include breakpoint($xs-bp) {
+    max-width: 200px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .intro__features {
   display: flex;
+  flex-wrap: wrap;
 
   margin-bottom: 122px;
+
+  @include breakpoint($md-bp) {
+    margin-bottom: 0px;
+  }
 }
 
 .intro__features-item {
@@ -49,6 +76,17 @@
 
   & + .intro__features-item {
     margin-left: 60px;
+
+    @include breakpoint($md-bp) {
+      margin-left: 15px;
+    }
+  }
+
+  @include breakpoint($md-bp) {
+    width: 100%;
+
+    margin-left: 15px;
+    margin-bottom: 55px;
   }
 }
 
@@ -121,4 +159,8 @@
   border: none;
 
   padding: 21px 60px;
+
+  @include breakpoint($md-bp) {
+    display: none;
+  }
 }

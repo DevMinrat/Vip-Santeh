@@ -1,5 +1,13 @@
 section {
   padding: 70px 0 120px;
+
+  @include breakpoint($md-bp) {
+    padding: 60px 0 50px;
+  }
+
+  @include breakpoint($xs-bp) {
+    padding: 50px 0 20px;
+  }
 }
 
 .section__title {
@@ -9,6 +17,16 @@ section {
   color: $black;
 
   margin-bottom: 60px;
+
+  @include breakpoint($md-bp) {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  @include breakpoint($xs-bp) {
+    font-size: 27px;
+    line-height: 32px;
+  }
 
   &--video {
     max-width: 540px;

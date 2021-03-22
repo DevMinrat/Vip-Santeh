@@ -12,11 +12,21 @@
     height: 306px;
 
     background: url(/assets/images/bg-lines.svg) no-repeat right;
+
+    @include breakpoint($md-bp) {
+      display: none;
+    }
   }
 }
 
-.video__img {
+.video__img-wrapper {
   margin-bottom: 50px;
+}
+
+.video__img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
 }
 
 .play-btn__wrapper {
@@ -32,6 +42,25 @@
 
   transform: translateY(-60%) skewX(-25deg);
 
+  @include breakpoint($md-bp) {
+    left: 50%;
+
+    width: 100px;
+    height: 120px;
+
+    transform: translate(-50%, -50%) skewX(-25deg);
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 68px;
+    height: 75px;
+  }
+
+  @include breakpoint($xs-bp) {
+    width: 48px;
+    height: 55px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -42,6 +71,10 @@
     height: 81px;
 
     background-color: #dcdcdc;
+
+    @include breakpoint($md-bp) {
+      display: none;
+    }
   }
 }
 
@@ -57,9 +90,19 @@
   fill: $white;
 
   transform: translate(-50%, -50%) skewX(25deg);
+
+  @include breakpoint($sm-bp) {
+    width: 21px;
+    height: 29px;
+  }
+  @include breakpoint($xs-bp) {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .video__btn {
+  width: 100%;
   max-width: 261px;
   height: 70px;
 
@@ -71,4 +114,13 @@
   border: none;
 
   padding: 21px 60px;
+
+  @include breakpoint($md-bp) {
+    display: block;
+    max-width: 345px;
+
+    font-size: 16px;
+
+    margin: 0 auto;
+  }
 }

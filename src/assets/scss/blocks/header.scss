@@ -3,6 +3,11 @@
   z-index: 99;
 
   width: 100%;
+
+  @include breakpoint(1100px) {
+    display: block;
+    background-color: $white;
+  }
 }
 
 .header__inner {
