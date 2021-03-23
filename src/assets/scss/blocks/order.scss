@@ -1,10 +1,14 @@
 .order {
   position: relative;
 
-  background: url(/assets/images/rectangles.png) $black no-repeat bottom right
-    370px;
+  background: url(/assets/images/rectangles.png) $black no-repeat bottom center;
 
   padding: 50px 0;
+
+  @include breakpoint($xlg-bp) {
+    padding-top: 36px;
+    padding-bottom: 300px;
+  }
 
   &::before {
     content: "";
@@ -19,6 +23,10 @@
     background-color: $primary;
 
     transform: skewX(25deg);
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &__inner {
@@ -40,6 +48,12 @@
       z-index: 1;
 
       background: url(/assets/images/order/pipe.png) no-repeat;
+
+      @include breakpoint($xlg-bp) {
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -52,12 +66,21 @@
     color: $white;
 
     margin-bottom: 40px;
+
+    @include breakpoint($sm-bp) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__footnote {
     font-size: 14px;
     line-height: 17px;
     color: $white;
+
+    @include breakpoint(1170px) {
+      text-align: center;
+    }
   }
 }
 
@@ -68,10 +91,15 @@
 
   & > * + * {
     margin-left: 25px;
+
+    @include breakpoint(1170px) {
+      margin-left: 0;
+    }
   }
 
   &-input {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 70px;
 
     padding: 20px 30px;
@@ -86,10 +114,17 @@
       line-height: 27px;
       color: $white;
     }
+
+    @include breakpoint(1170px) {
+      display: block;
+
+      margin: 0 auto 33px;
+    }
   }
 
   &-btn {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 70px;
 
     background: $primary;
@@ -98,6 +133,12 @@
     font-size: 18px;
     line-height: 27px;
     color: $white;
+
+    @include breakpoint(1170px) {
+      display: block;
+
+      margin: 0 auto;
+    }
   }
 }
 
