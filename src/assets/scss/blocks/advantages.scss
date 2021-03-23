@@ -2,13 +2,21 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @include breakpoint($xlg-bp) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .advantages__item {
   display: flex;
-  //   width: 50%;
 
   margin-bottom: 80px;
+
+  @include breakpoint($xlg-bp) {
+    flex-direction: column;
+  }
 
   &-rectangle {
     position: relative;
@@ -16,7 +24,7 @@
     width: 59px;
     height: 125px;
 
-    margin-right: 80px;
+    margin: 0 80px 25px 30px;
 
     background-color: #dcdcdc;
 
@@ -24,6 +32,19 @@
 
     &--black {
       background-color: $black;
+    }
+  }
+
+  &-lines {
+    display: none;
+
+    margin-left: 100px;
+    margin-top: 10px;
+
+    transform: skewX(25deg);
+
+    @include breakpoint($xlg-bp) {
+      display: block;
     }
   }
 
@@ -42,6 +63,10 @@
 
   &-content {
     max-width: 335px;
+
+    @include breakpoint($xlg-bp) {
+      max-width: 935px;
+    }
   }
 
   &-title {
@@ -50,6 +75,11 @@
     line-height: 36px;
 
     margin-bottom: 11px;
+
+    @include breakpoint($sm-bp) {
+      font-size: 27px;
+      line-height: 32px;
+    }
   }
 
   &-text {
