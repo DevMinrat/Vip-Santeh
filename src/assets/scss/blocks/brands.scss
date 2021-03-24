@@ -6,7 +6,7 @@
   box-sizing: border-box;
 
   width: 100%;
-  max-width: 360px;
+  // max-width: 360px;
   min-height: 225px;
 
   background: #f8f8f8;
@@ -25,5 +25,21 @@
     font-size: 20px;
     line-height: 24px;
     color: $black;
+  }
+}
+
+.swiper-pagination--brands {
+  display: none;
+
+  margin-top: 55px;
+
+  @include breakpoint(725px) {
+    display: block;
+  }
+}
+
+.swiper-button--brands {
+  @include breakpoint(725px) {
+    display: none;
   }
 }

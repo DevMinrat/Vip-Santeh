@@ -2688,17 +2688,33 @@ section {
     flex-wrap: wrap;
 }
 
+@media (max-width: 1050px) {
+    .advantages__inner {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
 .advantages__item {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 80px;
 }
 
+@media (max-width: 1050px) {
+    .advantages__item {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
 .advantages__item-rectangle {
     position: relative;
     width: 59px;
     height: 125px;
-    margin-right: 80px;
+    margin: 0 80px 25px 30px;
     background-color: #dcdcdc;
     -webkit-transform: skewX(-25deg);
     transform: skewX(-25deg);
@@ -2706,6 +2722,34 @@ section {
 
 .advantages__item-rectangle--black {
     background-color: #24242e;
+}
+
+@media (max-width: 575px) {
+    .advantages__item-rectangle {
+        width: 40px;
+        height: 79px;
+    }
+}
+
+.advantages__item-lines {
+    display: none;
+    margin-left: 100px;
+    margin-top: 10px;
+    -webkit-transform: skewX(25deg);
+    transform: skewX(25deg);
+}
+
+@media (max-width: 1050px) {
+    .advantages__item-lines {
+        display: block;
+    }
+}
+
+@media (max-width: 575px) {
+    .advantages__item-lines {
+        margin-left: 70px;
+        margin-top: -15px;
+    }
 }
 
 .advantages__item-num {
@@ -2721,8 +2765,21 @@ section {
     transform: translateY(-50%) skewX(25deg);
 }
 
+@media (max-width: 575px) {
+    .advantages__item-num {
+        font-size: 36px;
+        left: 3px;
+    }
+}
+
 .advantages__item-content {
     max-width: 335px;
+}
+
+@media (max-width: 1050px) {
+    .advantages__item-content {
+        max-width: 935px;
+    }
 }
 
 .advantages__item-title {
@@ -2733,6 +2790,13 @@ section {
     margin-bottom: 11px;
 }
 
+@media (max-width: 575px) {
+    .advantages__item-title {
+        font-size: 27px;
+        line-height: 32px;
+    }
+}
+
 .advantages__item-text {
     font-size: 16px;
     line-height: 19px;
@@ -2740,8 +2804,15 @@ section {
 
 .order {
     position: relative;
-    background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right 370px;
+    background: url(/assets/images/rectangles.png) #24242e no-repeat bottom center;
     padding: 50px 0;
+}
+
+@media (max-width: 1050px) {
+    .order {
+        padding-top: 36px;
+        padding-bottom: 300px;
+    }
 }
 
 .order::before {
@@ -2755,6 +2826,12 @@ section {
     background-color: #1e489b;
     -webkit-transform: skewX(25deg);
     transform: skewX(25deg);
+}
+
+@media (max-width: 575px) {
+    .order::before {
+        display: none;
+    }
 }
 
 .order__inner {
@@ -2779,6 +2856,15 @@ section {
     background: url(/assets/images/order/pipe.png) no-repeat;
 }
 
+@media (max-width: 1050px) {
+    .order__inner::after {
+        top: 110%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
 .order__title {
     max-width: 815px;
     font-family: "Circe-Bold", sans-serif;
@@ -2789,10 +2875,23 @@ section {
     margin-bottom: 40px;
 }
 
+@media (max-width: 575px) {
+    .order__title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
 .order__footnote {
     font-size: 14px;
     line-height: 17px;
     color: #ffffff;
+}
+
+@media (max-width: 1170px) {
+    .order__footnote {
+        text-align: center;
+    }
 }
 
 .order__form,
@@ -2807,10 +2906,19 @@ section {
     margin-left: 25px;
 }
 
+@media (max-width: 1170px) {
+    .order__form > * + *,
+      .order-photo__form > * + *,
+      .order-price__form > * + * {
+        margin-left: 0;
+    }
+}
+
 .order__form-input,
   .order-photo__form-input,
   .order-price__form-input {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 70px;
     padding: 20px 30px;
     background: #353542;
@@ -2850,16 +2958,35 @@ section {
     color: #ffffff;
 }
 
+@media (max-width: 1170px) {
+    .order__form-input,
+      .order-photo__form-input,
+      .order-price__form-input {
+        display: block;
+        margin: 0 auto 33px;
+    }
+}
+
 .order__form-btn,
   .order-photo__form-btn,
   .order-price__form-btn {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 70px;
     background: #1e489b;
     border: none;
     font-size: 18px;
     line-height: 27px;
     color: #ffffff;
+}
+
+@media (max-width: 1170px) {
+    .order__form-btn,
+      .order-photo__form-btn,
+      .order-price__form-btn {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .order-photo {

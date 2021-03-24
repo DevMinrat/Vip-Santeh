@@ -15150,6 +15150,23 @@ const swiper = new Swiper(".swiper-container.brands__swiper-container", {
   slidesPerView: 3,
   spaceBetween: 30,
 
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    670: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 3,
+    },
+  },
+
+  pagination: {
+    el: ".swiper-pagination.swiper-pagination--brands",
+    clickable: true,
+  },
+
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",

@@ -2426,7 +2426,6 @@ section {
 .brands__item {
   box-sizing: border-box;
   width: 100%;
-  max-width: 360px;
   min-height: 225px;
   background: #f8f8f8;
   padding: 28px 40px 40px 40px; }
@@ -2439,6 +2438,17 @@ section {
     font-size: 20px;
     line-height: 24px;
     color: #24242e; }
+
+.swiper-pagination--brands {
+  display: none;
+  margin-top: 55px; }
+  @media (max-width: 725px) {
+    .swiper-pagination--brands {
+      display: block; } }
+
+@media (max-width: 725px) {
+  .swiper-button--brands {
+    display: none; } }
 
 .benefits {
   position: relative;
