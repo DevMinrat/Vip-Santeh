@@ -2993,6 +2993,12 @@ section {
     padding-top: 90px;
 }
 
+@media (max-width: 991px) {
+    .order-photo {
+        padding-top: 60px;
+    }
+}
+
 .order-photo__title {
     max-width: 560px;
     font-family: "Circe-Bold", sans-serif;
@@ -3152,7 +3158,6 @@ section {
 .brands__item {
     box-sizing: border-box;
     width: 100%;
-    max-width: 360px;
     min-height: 225px;
     background: #f8f8f8;
     padding: 28px 40px 40px 40px;
@@ -3173,9 +3178,32 @@ section {
     color: #24242e;
 }
 
+.swiper-pagination--brands {
+    display: none;
+    margin-top: 55px;
+}
+
+@media (max-width: 725px) {
+    .swiper-pagination--brands {
+        display: block;
+    }
+}
+
+@media (max-width: 725px) {
+    .swiper-button--brands {
+        display: none;
+    }
+}
+
 .benefits {
     position: relative;
     background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right 250px;
+}
+
+@media (max-width: 1150px) {
+    .benefits {
+        background-image: none;
+    }
 }
 
 .benefits::after {
@@ -3189,11 +3217,24 @@ section {
     background: url(/assets/images/benefits/benefits-lines.svg) no-repeat right;
 }
 
+@media (max-width: 1150px) {
+    .benefits::after {
+        display: none;
+    }
+}
+
 .benefits__inner {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+@media (max-width: 1150px) {
+    .benefits__inner {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .benefits__item {
@@ -3203,6 +3244,19 @@ section {
 
 .benefits__item:not(:nth-child(3n + 3)) {
     margin-right: 55px;
+}
+
+@media (max-width: 1150px) {
+    .benefits__item:not(:nth-child(3n + 3)) {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .benefits__item {
+        margin-right: 30px;
+        text-align: center;
+    }
 }
 
 .benefits__item-text {
@@ -3216,6 +3270,7 @@ section {
     height: 65px;
     fill: #9898a7;
     transition: all 0.1s linear;
+    z-index: 2;
 }
 
 .benefits__icon-wrapper {
@@ -3231,6 +3286,12 @@ section {
     border-radius: 50%;
     margin-bottom: 40px;
     transition: all 0.1s linear;
+}
+
+@media (max-width: 1150px) {
+    .benefits__icon-wrapper {
+        margin: 0 auto 40px;
+    }
 }
 
 .benefits__icon-wrapper:hover {

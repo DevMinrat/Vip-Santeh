@@ -147,6 +147,14 @@
 .order-photo {
   padding-top: 90px;
 
+  @include breakpoint($lg-bp) {
+    padding-top: 60px;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding-top: 40px;
+  }
+
   &__title {
     max-width: 560px;
 
@@ -189,11 +197,23 @@
   line-height: 24px;
   color: $primary;
 
+  @include breakpoint(1170px) {
+    text-align: center;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-top: 20px;
+  }
+}
+
+.input__file-button-text {
+  position: relative;
+
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -30px;
     z-index: 1;
     transform: translateY(-50%);
 
