@@ -2536,14 +2536,35 @@ section {
           fill: #1e489b; }
 
 .guarantee {
-  background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center right 400px; }
+  background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center right 25%; }
+  @media (max-width: 850px) {
+    .guarantee {
+      background-position: center bottom; } }
+  @media (max-width: 575px) {
+    .guarantee {
+      background-size: 60%; } }
   .guarantee__inner {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    @media (max-width: 850px) {
+      .guarantee__inner {
+        justify-content: center; } }
 
 .guarantee__item {
   position: relative;
   width: 25%; }
+  @media (max-width: 1100px) {
+    .guarantee__item {
+      text-align: center;
+      padding: 0 10px; } }
+  @media (max-width: 850px) {
+    .guarantee__item {
+      width: 34%;
+      margin-bottom: 30px; } }
+  @media (max-width: 450px) {
+    .guarantee__item {
+      width: 100%; } }
   .guarantee__item::after {
     content: "";
     position: absolute;
@@ -2553,8 +2574,14 @@ section {
     width: 171px;
     height: 43px;
     background: url(/assets/images/line-down.svg) no-repeat center; }
+    @media (max-width: 1100px) {
+      .guarantee__item::after {
+        display: none; } }
   .guarantee__item:nth-child(even) {
     margin-top: 30px; }
+    @media (max-width: 1100px) {
+      .guarantee__item:nth-child(even) {
+        margin-top: 0; } }
   .guarantee__item:nth-child(2)::after {
     top: -40px;
     background: url(/assets/images/line-up.svg) no-repeat center; }
@@ -2566,9 +2593,18 @@ section {
   font-weight: 800;
   font-size: 70px;
   color: #1e489b; }
+  @media (max-width: 575px) {
+    .guarantee-item__age-num {
+      font-size: 50px; } }
 
 .guarantee__item-age {
   margin-bottom: 60px; }
+  @media (max-width: 850px) {
+    .guarantee__item-age {
+      margin-bottom: 20px; } }
+  @media (max-width: 575px) {
+    .guarantee__item-age {
+      margin-bottom: 15px; } }
 
 .guarantee-item__age-text {
   font-family: "Circe-Bold", sans-serif;
@@ -2577,12 +2613,22 @@ section {
   line-height: 22px;
   letter-spacing: 0.04em;
   text-transform: uppercase; }
+  @media (max-width: 575px) {
+    .guarantee-item__age-text {
+      font-size: 14px; } }
 
 .guarantee__item-text {
   max-width: 180px;
   font-size: 24px;
   line-height: 29px;
   color: #24242e; }
+  @media (max-width: 1100px) {
+    .guarantee__item-text {
+      margin: 0 auto; } }
+  @media (max-width: 575px) {
+    .guarantee__item-text {
+      font-size: 16px;
+      line-height: 19px; } }
 
 .price {
   background: #f8f8f8; }

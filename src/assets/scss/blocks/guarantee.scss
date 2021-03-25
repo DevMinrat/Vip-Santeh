@@ -1,16 +1,44 @@
 .guarantee {
   background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center
-    right 400px;
+    right 25%;
+
+  @include breakpoint($md-bp) {
+    background-position: center bottom;
+  }
+
+  @include breakpoint($sm-bp) {
+    background-size: 60%;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint($md-bp) {
+      justify-content: center;
+    }
   }
 }
 
 .guarantee__item {
   position: relative;
   width: 25%;
+
+  @include breakpoint(1100px) {
+    text-align: center;
+
+    padding: 0 10px;
+  }
+
+  @include breakpoint($md-bp) {
+    width: 34%;
+    margin-bottom: 30px;
+  }
+
+  @include breakpoint($xs-bp) {
+    width: 100%;
+  }
 
   &::after {
     content: "";
@@ -23,10 +51,18 @@
     height: 43px;
 
     background: url(/assets/images/line-down.svg) no-repeat center;
+
+    @include breakpoint(1100px) {
+      display: none;
+    }
   }
 
   &:nth-child(even) {
     margin-top: 30px;
+
+    @include breakpoint(1100px) {
+      margin-top: 0;
+    }
   }
 
   &:nth-child(2)::after {
@@ -44,10 +80,22 @@
   @include f800;
   font-size: 70px;
   color: $primary;
+
+  @include breakpoint($sm-bp) {
+    font-size: 50px;
+  }
 }
 
 .guarantee__item-age {
   margin-bottom: 60px;
+
+  @include breakpoint($md-bp) {
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 15px;
+  }
 }
 
 .guarantee-item__age-text {
@@ -56,6 +104,10 @@
   line-height: 22px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @include breakpoint($sm-bp) {
+    font-size: 14px;
+  }
 }
 
 .guarantee__item-text {
@@ -64,4 +116,13 @@
   font-size: 24px;
   line-height: 29px;
   color: $black;
+
+  @include breakpoint(1100px) {
+    margin: 0 auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
