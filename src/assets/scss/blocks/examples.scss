@@ -1,9 +1,9 @@
-.examples__swiper-container {
-  margin-bottom: 58px;
+.examples__inner {
+  position: relative;
 }
 
 .examples__item {
-  display: flex;
+  display: flex !important;
 
   &-img {
     // display: block;
@@ -14,10 +14,6 @@
     object-fit: cover;
 
     margin-right: 50px;
-
-    &-wrapper {
-      display: flex;
-    }
   }
 
   &-title {
@@ -34,6 +30,10 @@
 
     margin-left: 5px;
   }
+}
+
+.examples__img-wrapper {
+  display: flex;
 }
 
 .examples-item__descr {

@@ -1,7 +1,7 @@
-//= ../../../node_modules/swiper/swiper-bundle.js
+//= ../../../node_modules/slick-carousel/slick/slick.js
 //= ../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js
 //= components/fancybox.js
-//= components/swiper.js
+//= components/slick.js
 
 window.addEventListener("DOMContentLoaded", () => {
   // input-file

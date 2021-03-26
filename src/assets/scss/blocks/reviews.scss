@@ -1,11 +1,11 @@
-.reviews__swiper-container {
+.reviews__inner {
+  position: relative;
+
   padding-top: 60px;
-  margin-bottom: 50px;
 }
 
 .reviews__item {
-  display: flex;
-  box-sizing: border-box;
+  display: flex !important;
 
   width: 50%;
   max-width: 555px;

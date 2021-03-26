@@ -1,12 +1,12 @@
-.brands__swiper-container {
-  padding-top: 60px;
+.brands__inner {
+  position: relative;
+
+  padding-top: 55px;
 }
 
 .brands__item {
-  box-sizing: border-box;
-
   width: 100%;
-  // max-width: 360px;
+  max-width: 360px;
   min-height: 225px;
 
   background: #f8f8f8;
