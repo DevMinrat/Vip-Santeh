@@ -589,6 +589,55 @@ a:hover {
     display: none;
 }
 
+.prev,
+.next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 42px;
+    height: 18px;
+    fill: transparent;
+}
+
+.prev {
+    right: 70px;
+}
+
+.next {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.prev--examples,
+.next--examples {
+    top: 70px;
+}
+
+.slick-dots {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 0;
+}
+
+.slick-dots li button {
+    width: 46px;
+    height: 8px;
+    background-color: #f8f8f8;
+    border: none;
+}
+
+.slick-dots li + li {
+    margin-left: 30px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #24242e;
+}
+
 body.compensate-for-scrollbar {
     overflow: hidden;
 }
@@ -2644,13 +2693,14 @@ section {
     margin-bottom: 25px;
 }
 
-.brands__swiper-container {
-    padding-top: 60px;
+.brands__inner {
+    position: relative;
+    padding-top: 55px;
 }
 
 .brands__item {
-    box-sizing: border-box;
     width: 100%;
+    max-width: 360px;
     min-height: 225px;
     background: #f8f8f8;
     padding: 28px 40px 40px 40px;
@@ -3038,13 +3088,13 @@ section {
     display: none;
 }
 
-.examples__swiper-container {
-    margin-bottom: 58px;
+.examples__inner {
+    position: relative;
 }
 
 .examples__item {
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-flexbox !important;
+    display: flex !important;
 }
 
 .examples__item-img {
@@ -3054,11 +3104,6 @@ section {
     -o-object-fit: cover;
     object-fit: cover;
     margin-right: 50px;
-}
-
-.examples__item-img-wrapper {
-    display: -ms-flexbox;
-    display: flex;
 }
 
 .examples__item-title {
@@ -3073,6 +3118,11 @@ section {
 .examples__item-content {
     max-width: 450px;
     margin-left: 5px;
+}
+
+.examples__img-wrapper {
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .examples-item__descr {
@@ -3404,15 +3454,14 @@ section {
     transform: skewX(-25deg);
 }
 
-.reviews__swiper-container {
+.reviews__inner {
+    position: relative;
     padding-top: 60px;
-    margin-bottom: 50px;
 }
 
 .reviews__item {
-    display: -ms-flexbox;
-    display: flex;
-    box-sizing: border-box;
+    display: -ms-flexbox !important;
+    display: flex !important;
     width: 50%;
     max-width: 555px;
     padding: 36px 45px;

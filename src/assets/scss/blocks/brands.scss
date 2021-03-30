@@ -1,3 +1,12 @@
+.brands {
+  & .slick-list {
+    @include breakpoint(1150px) {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+}
+
 .brands__inner {
   position: relative;
 
@@ -12,6 +21,11 @@
   background: #f8f8f8;
 
   padding: 28px 40px 40px 40px;
+
+  @include breakpoint(775px) {
+    display: block !important;
+    margin: 0 auto;
+  }
 
   &-img {
     display: flex;
@@ -28,18 +42,9 @@
   }
 }
 
-.swiper-pagination--brands {
-  display: none;
-
-  margin-top: 55px;
-
-  @include breakpoint(725px) {
-    display: block;
-  }
-}
-
-.swiper-button--brands {
-  @include breakpoint(725px) {
+.prev--brands,
+.next--brands {
+  @include breakpoint(775px) {
     display: none;
   }
 }

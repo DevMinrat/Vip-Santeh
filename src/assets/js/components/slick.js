@@ -4,7 +4,22 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $(".prev--brands"),
-    nextArrow: $(".next-brands"),
+    nextArrow: $(".next--brands"),
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 775,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".examples-slider").slick({
