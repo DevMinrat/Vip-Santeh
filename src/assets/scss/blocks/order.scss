@@ -231,6 +231,14 @@
 
   background: url(/assets/images/rectangles.png) $black no-repeat bottom right;
 
+  @include breakpoint($md-bp) {
+    padding: 60px 0;
+  }
+
+  @include breakpoint($xs-bp) {
+    padding: 40px 0;
+  }
+
   &__inner {
     position: relative;
     display: flex;
@@ -249,6 +257,10 @@
 
       width: 142px;
       height: 142px;
+
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
     }
   }
 
@@ -261,6 +273,8 @@
     color: $white;
 
     margin-bottom: 25px;
+
+    z-index: 1;
   }
 }
 
