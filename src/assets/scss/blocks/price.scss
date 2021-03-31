@@ -4,7 +4,10 @@
   &__inner {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+
+    @include breakpoint($lg-bp) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -14,6 +17,13 @@
 
     border-bottom: 9px solid $primary;
     background-color: $white;
+
+    @include breakpoint($lg-bp) {
+      width: 100%;
+      max-width: 100%;
+
+      padding: 30px;
+    }
 
     &-title {
       min-height: 101px;
@@ -26,12 +36,27 @@
       margin-bottom: 47px;
 
       border-bottom: 3px dashed $primary;
+
+      @include breakpoint($lg-bp) {
+        min-height: 0;
+
+        margin-bottom: 35px;
+      }
     }
   }
 
   &__item + &__item {
     margin-left: 30px;
+
+    @include breakpoint($lg-bp) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
   }
+}
+
+.price-slider {
+  display: flex;
 }
 
 .item-service {

@@ -48,6 +48,12 @@ section {
     color: $white;
   }
 
+  &--price {
+    @include breakpoint($lg-bp) {
+      margin-bottom: 35px;
+    }
+  }
+
   &--examples {
     max-width: 760px;
   }

@@ -1341,6 +1341,9 @@ section {
   .section__title--benefits {
     max-width: 600px;
     color: #ffffff; }
+  @media (max-width: 991px) {
+    .section__title--price {
+      margin-bottom: 35px; } }
   .section__title--examples {
     max-width: 760px; }
   .section__title--experts {
@@ -2039,6 +2042,9 @@ section {
     color: #ffffff;
     margin-bottom: 25px;
     z-index: 1; }
+    @media (max-width: 1140px) {
+      .order-price__title {
+        margin-bottom: 40px; } }
 
 .order-repair {
   position: relative;
@@ -2280,13 +2286,20 @@ section {
   background: #f8f8f8; }
   .price__inner {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
+    justify-content: center; }
+    @media (max-width: 991px) {
+      .price__inner {
+        flex-wrap: wrap; } }
   .price__item {
     max-width: 360px;
     padding: 35px 42px;
     border-bottom: 9px solid #1e489b;
     background-color: #ffffff; }
+    @media (max-width: 991px) {
+      .price__item {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px; } }
     .price__item-title {
       min-height: 101px;
       font-size: 20px;
@@ -2295,8 +2308,19 @@ section {
       padding-bottom: 26px;
       margin-bottom: 47px;
       border-bottom: 3px dashed #1e489b; }
+      @media (max-width: 991px) {
+        .price__item-title {
+          min-height: 0;
+          margin-bottom: 35px; } }
   .price__item + .price__item {
     margin-left: 30px; }
+    @media (max-width: 991px) {
+      .price__item + .price__item {
+        margin-left: 0;
+        margin-top: 30px; } }
+
+.price-slider {
+  display: flex; }
 
 .item-service {
   font-size: 16px;
