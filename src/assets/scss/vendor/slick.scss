@@ -126,7 +126,22 @@
 
 .prev--examples,
 .next--examples {
-  top: 70px;
+  top: -70px;
+
+  @include breakpoint(1024px) {
+    left: 0;
+    top: -30px;
+  }
+
+  @include breakpoint(850px) {
+    left: 0;
+  }
+}
+
+.next--examples {
+  @include breakpoint(1024px) {
+    left: 70px;
+  }
 }
 
 .slick-dots {
