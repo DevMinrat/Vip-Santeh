@@ -2493,6 +2493,10 @@ section {
   .installers__inner {
     display: flex;
     margin-bottom: 30px; }
+    @media (max-width: 991px) {
+      .installers__inner {
+        justify-content: center;
+        flex-wrap: wrap; } }
   .installers__img-wrapper {
     display: flex;
     justify-content: center;
@@ -2500,13 +2504,27 @@ section {
     width: 219px;
     height: 219px;
     margin-right: 55px;
+    padding: 20px;
     border: 3px dashed #24242e;
     border-radius: 50%; }
+    @media (max-width: 991px) {
+      .installers__img-wrapper {
+        margin-bottom: 20px; } }
   .installers__item {
     display: flex;
     align-items: center; }
+    @media (max-width: 991px) {
+      .installers__item {
+        flex-direction: column; } }
+    @media (max-width: 627px) {
+      .installers__item {
+        width: 100%; } }
     .installers__item + .installers__item {
       margin-left: 50px; }
+      @media (max-width: 627px) {
+        .installers__item + .installers__item {
+          margin-left: 0;
+          margin-top: 35px; } }
     .installers__item-img {
       width: 171px;
       height: 171px;

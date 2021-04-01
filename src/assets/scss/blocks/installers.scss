@@ -6,6 +6,11 @@
     display: flex;
 
     margin-bottom: 30px;
+
+    @include breakpoint($lg-bp) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__img-wrapper {
@@ -17,17 +22,35 @@
     height: 219px;
 
     margin-right: 55px;
+    padding: 20px;
 
     border: 3px dashed $black;
     border-radius: 50%;
+
+    @include breakpoint($lg-bp) {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
 
+    @include breakpoint($lg-bp) {
+      flex-direction: column;
+    }
+
+    @include breakpoint(627px) {
+      width: 100%;
+    }
+
     & + & {
       margin-left: 50px;
+
+      @include breakpoint(627px) {
+        margin-left: 0;
+        margin-top: 35px;
+      }
     }
 
     &-img {
