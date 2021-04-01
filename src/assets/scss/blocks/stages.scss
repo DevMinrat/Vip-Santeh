@@ -11,12 +11,38 @@
 
   margin-bottom: 32px;
 
+  @include breakpoint(1159px) {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+
+  @include breakpoint(899px) {
+    max-width: 650px;
+  }
+
+  @include breakpoint(650px) {
+    margin-bottom: 0;
+    padding: 30px 0;
+
+    border-top: 4px dashed #dcdcdc;
+  }
+
   & + & {
     margin-left: 30px;
+
+    @include breakpoint(1159px) {
+      margin-left: 0;
+      margin-right: 30px;
+    }
   }
 
   &:nth-child(5) {
     margin-left: 0;
+
+    @include breakpoint(1159px) {
+      margin-left: 0;
+      margin-right: 30px;
+    }
   }
 
   &::after {
@@ -30,6 +56,10 @@
     height: 43px;
 
     background: url(/assets/images/line-down.svg) no-repeat center;
+
+    @include breakpoint(1159px) {
+      display: none;
+    }
   }
 
   &:nth-child(even)::after {
@@ -37,6 +67,10 @@
     left: 115px;
 
     background: url(/assets/images/line-up.svg) no-repeat center;
+
+    @include breakpoint(1159px) {
+      display: none;
+    }
   }
 
   &:last-child::after,
