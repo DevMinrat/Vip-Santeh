@@ -15,12 +15,40 @@
 
   padding: 0 44px;
 
+  @include breakpoint(900px) {
+    min-height: 200px;
+    padding: 0 10px;
+  }
+
+  @include breakpoint(672px) {
+    min-height: auto;
+    justify-content: flex-start;
+
+    background: none;
+  }
+
+  @include breakpoint(425px) {
+    // padding: ;
+  }
+
   & + & {
     margin-left: 53px;
+
+    @include breakpoint(900px) {
+      margin-left: 20px;
+    }
+
+    @include breakpoint(425px) {
+      margin-left: 0px;
+    }
   }
 
   &--increased {
     transform: scale(1.15);
+
+    @include breakpoint(900px) {
+      transform: none;
+    }
 
     &::before {
       content: "";
@@ -33,6 +61,10 @@
       height: 127px;
 
       background: url(/assets/images/likes.svg) no-repeat top center;
+
+      @include breakpoint(900px) {
+        display: none;
+      }
     }
   }
 
@@ -44,6 +76,10 @@
 
     margin-bottom: 16px;
 
+    @include breakpoint(900px) {
+      font-size: 50px;
+    }
+
     &--increased {
       position: relative;
 
@@ -51,6 +87,13 @@
       line-height: 84px;
 
       margin-bottom: 11px;
+
+      @include breakpoint(900px) {
+        font-size: 50px;
+        line-height: 66px;
+
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -63,11 +106,34 @@
 
     margin-bottom: 14px;
 
+    @include breakpoint(550px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
     &--increased {
       font-size: 24px;
       line-height: 29px;
 
       margin-bottom: 11px;
+
+      @include breakpoint(900px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include breakpoint(550px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &--br {
+      display: none;
+
+      @include breakpoint(425px) {
+        display: block;
+      }
     }
   }
 }

@@ -1344,6 +1344,9 @@ section {
     .section__title {
       font-size: 27px;
       line-height: 32px; } }
+  @media (max-width: 425px) {
+    .section__title {
+      margin-bottom: 36px; } }
   .section__title--video {
     max-width: 540px; }
   .section__title--advantages {
@@ -1363,6 +1366,9 @@ section {
     color: #ffffff; }
   .section__title--counters {
     margin-bottom: 80px; }
+    @media (max-width: 425px) {
+      .section__title--counters {
+        margin-bottom: 36px; } }
   .section__title--reviews {
     margin-bottom: 0; }
 
@@ -2559,10 +2565,28 @@ section {
   min-height: 314px;
   background: #f8f8f8;
   padding: 0 44px; }
+  @media (max-width: 900px) {
+    .counters__item {
+      min-height: 200px;
+      padding: 0 10px; } }
+  @media (max-width: 672px) {
+    .counters__item {
+      min-height: auto;
+      justify-content: flex-start;
+      background: none; } }
   .counters__item + .counters__item {
     margin-left: 53px; }
+    @media (max-width: 900px) {
+      .counters__item + .counters__item {
+        margin-left: 20px; } }
+    @media (max-width: 425px) {
+      .counters__item + .counters__item {
+        margin-left: 0px; } }
   .counters__item--increased {
     transform: scale(1.15); }
+    @media (max-width: 900px) {
+      .counters__item--increased {
+        transform: none; } }
     .counters__item--increased::before {
       content: "";
       position: absolute;
@@ -2572,6 +2596,9 @@ section {
       width: 98px;
       height: 127px;
       background: url(/assets/images/likes.svg) no-repeat top center; }
+      @media (max-width: 900px) {
+        .counters__item--increased::before {
+          display: none; } }
   .counters__item-num {
     font-family: "Circe-ExtraBold", sans-serif;
     font-weight: 800;
@@ -2579,21 +2606,46 @@ section {
     line-height: 66px;
     color: #1e489b;
     margin-bottom: 16px; }
+    @media (max-width: 900px) {
+      .counters__item-num {
+        font-size: 50px; } }
     .counters__item-num--increased {
       position: relative;
       font-size: 70px;
       line-height: 84px;
       margin-bottom: 11px; }
+      @media (max-width: 900px) {
+        .counters__item-num--increased {
+          font-size: 50px;
+          line-height: 66px;
+          margin-bottom: 16px; } }
   .counters__item-text {
     max-width: 200px;
     font-size: 20px;
     line-height: 24px;
     color: #24242e;
     margin-bottom: 14px; }
+    @media (max-width: 550px) {
+      .counters__item-text {
+        font-size: 14px;
+        line-height: 16px; } }
     .counters__item-text--increased {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 11px; }
+      @media (max-width: 900px) {
+        .counters__item-text--increased {
+          font-size: 20px;
+          line-height: 24px; } }
+      @media (max-width: 550px) {
+        .counters__item-text--increased {
+          font-size: 14px;
+          line-height: 16px; } }
+    .counters__item-text--br {
+      display: none; }
+      @media (max-width: 425px) {
+        .counters__item-text--br {
+          display: block; } }
 
 .stages__inner {
   display: flex;
