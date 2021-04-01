@@ -611,7 +611,28 @@ a:hover {
 
 .prev--examples,
 .next--examples {
-    top: 70px;
+    top: -70px;
+}
+
+@media (max-width: 1024px) {
+    .prev--examples,
+    .next--examples {
+        left: 0;
+        top: -30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .prev--examples,
+    .next--examples {
+        left: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .next--examples {
+        left: 70px;
+    }
 }
 
 .slick-dots {
@@ -1599,6 +1620,12 @@ section {
 .section__title--benefits {
     max-width: 600px;
     color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    .section__title--price {
+        margin-bottom: 35px;
+    }
 }
 
 .section__title--examples {
@@ -3052,8 +3079,13 @@ section {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .price__inner {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 }
 
 .price__item {
@@ -3061,6 +3093,14 @@ section {
     padding: 35px 42px;
     border-bottom: 9px solid #1e489b;
     background-color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    .price__item {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
 }
 
 .price__item-title {
@@ -3073,8 +3113,27 @@ section {
     border-bottom: 3px dashed #1e489b;
 }
 
+@media (max-width: 991px) {
+    .price__item-title {
+        min-height: 0;
+        margin-bottom: 35px;
+    }
+}
+
 .price__item + .price__item {
     margin-left: 30px;
+}
+
+@media (max-width: 991px) {
+    .price__item + .price__item {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+.price-slider {
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .item-service {
@@ -3126,6 +3185,26 @@ section {
     display: flex !important;
 }
 
+@media (max-width: 870px) {
+    .examples__item {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.examples__item-images {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 870px) {
+    .examples__item-images {
+        margin-bottom: 35px;
+    }
+}
+
 .examples__item-img {
     width: 100%;
     max-width: 289px;
@@ -3150,8 +3229,11 @@ section {
 }
 
 .examples__img-wrapper {
-    display: -ms-flexbox;
-    display: flex;
+    margin-right: 20px;
+}
+
+.examples__img-wrapper + .examples__img-wrapper {
+    margin-left: 10px;
 }
 
 .examples-item__descr {
