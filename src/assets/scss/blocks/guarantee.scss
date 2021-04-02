@@ -1,6 +1,6 @@
 .guarantee {
-  background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center
-    right 25%;
+  background: url(../images/guarantee/guarantee-bg.png) no-repeat center right
+    25%;
 
   @include breakpoint($md-bp) {
     background-position: center bottom;
@@ -50,7 +50,7 @@
     width: 171px;
     height: 43px;
 
-    background: url(/assets/images/line-down.svg) no-repeat center;
+    background: url(../images/line-down.svg) no-repeat center;
 
     @include breakpoint(1100px) {
       display: none;
@@ -68,7 +68,7 @@
   &:nth-child(2)::after {
     top: -40px;
 
-    background: url(/assets/images/line-up.svg) no-repeat center;
+    background: url(../images/line-up.svg) no-repeat center;
   }
 
   &:last-child::after {

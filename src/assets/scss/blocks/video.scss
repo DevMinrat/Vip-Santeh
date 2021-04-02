@@ -11,7 +11,7 @@
     width: 638px;
     height: 306px;
 
-    background: url(/assets/images/bg-lines.svg) no-repeat right;
+    background: url(../images/bg-lines.svg) no-repeat right;
 
     @include breakpoint($md-bp) {
       display: none;

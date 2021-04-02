@@ -1,7 +1,11 @@
 .faq {
   padding-top: 0;
 
-  background: url(/assets/images/faq/faq-bg.png) no-repeat right 200px top 110px;
+  background: url(../images/faq/faq-bg.png) no-repeat right 200px top 110px;
+
+  @include breakpoint($xl-bp) {
+    background: none;
+  }
 }
 
 .faq__item {
@@ -10,8 +14,16 @@
 
   background-color: #f8f8f8;
 
-  padding: 20px 42px 23px;
+  padding: 20px 50px 23px 42px;
   margin-bottom: 20px;
+
+  @include breakpoint(650px) {
+    padding-left: 15px;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding-right: 30px;
+  }
 
   cursor: pointer;
 
@@ -25,8 +37,12 @@
 
     cursor: pointer;
 
-    background: url(/assets/images/faq/arrow-down.svg) no-repeat center;
+    background: url(../images/faq/arrow-down.svg) no-repeat center;
     background-color: $black;
+
+    @include breakpoint($sm-bp) {
+      width: 25px;
+    }
   }
 
   &.open::after {
@@ -39,10 +55,14 @@
 
     cursor: pointer;
 
-    background: url(/assets/images/faq/arrow-up.svg) no-repeat center;
+    background: url(../images/faq/arrow-up.svg) no-repeat center;
     background-color: $primary;
 
     transform: background rotateY(22deg);
+
+    @include breakpoint($sm-bp) {
+      width: 25px;
+    }
   }
 
   &-title {
@@ -50,17 +70,21 @@
 
     font-size: 20px;
     line-height: 24px;
+
+    @include breakpoint($sm-bp) {
+      font-size: 18px;
+    }
   }
 
   &-text {
     max-width: 710px;
+    max-height: 0;
 
     font-size: 14px;
     line-height: 17px;
 
     margin-top: 0;
 
-    max-height: 0;
     overflow: hidden;
     transition: all 0.2s ease-out;
   }

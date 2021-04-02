@@ -1,8 +1,7 @@
 .benefits {
   position: relative;
 
-  background: url(/assets/images/rectangles.png) $black no-repeat bottom right
-    250px;
+  background: url(../images/rectangles.png) $black no-repeat bottom right 250px;
 
   @include breakpoint(1150px) {
     background-image: none;
@@ -18,7 +17,7 @@
     width: 638px;
     height: 306px;
 
-    background: url(/assets/images/benefits/benefits-lines.svg) no-repeat right;
+    background: url(../images/benefits/benefits-lines.svg) no-repeat right;
 
     @include breakpoint(1150px) {
       display: none;

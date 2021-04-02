@@ -60,7 +60,7 @@
       width: 98px;
       height: 127px;
 
-      background: url(/assets/images/likes.svg) no-repeat top center;
+      background: url(../images/likes.svg) no-repeat top center;
 
       @include breakpoint(900px) {
         display: none;
