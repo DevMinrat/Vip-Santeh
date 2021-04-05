@@ -2944,21 +2944,36 @@ section {
     margin-right: 35px; } }
 
 .footer {
-  height: 145px;
+  padding: 47px 0 50px;
   background-color: #24242e; }
   .footer__inner {
-    height: 145px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (max-width: 460px) {
+      .footer__inner {
+        flex-direction: column; } }
   .footer__logo {
     display: flex;
     align-items: center; }
+    @media (max-width: 760px) {
+      .footer__logo {
+        flex-direction: column;
+        align-items: start; } }
+    @media (max-width: 460px) {
+      .footer__logo {
+        margin-bottom: 40px;
+        align-items: center; } }
     .footer__logo-img {
       width: 210px;
       height: 35px;
       padding-right: 53px;
       fill: #ffffff; }
+      @media (max-width: 460px) {
+        .footer__logo-img {
+          width: 216px;
+          height: 40px;
+          padding-right: 0; } }
     .footer__logo-text {
       position: relative;
       font-size: 15px;
@@ -2966,6 +2981,14 @@ section {
       padding-left: 39px;
       padding-top: 6px;
       margin-top: 6px; }
+      @media (max-width: 760px) {
+        .footer__logo-text {
+          padding-left: 0;
+          padding-top: 3px;
+          margin-top: 0; } }
+      @media (max-width: 520px) {
+        .footer__logo-text {
+          font-size: 12px; } }
       .footer__logo-text::before {
         content: "";
         width: 2px;
@@ -2976,13 +2999,26 @@ section {
         z-index: 1;
         transform: translateY(-50%);
         background-color: #ffffff; }
-  .footer__social-link + .footer__social-link {
-    margin-left: 60px; }
-  .footer__social-icon {
-    fill: #ffffff; }
-    .footer__social-icon--vk, .footer__social-icon--youtube {
-      width: 31px;
-      height: 31px; }
-    .footer__social-icon--inst {
-      width: 25px;
-      height: 25px; }
+        @media (max-width: 760px) {
+          .footer__logo-text::before {
+            display: none; } }
+  .footer__social {
+    display: flex;
+    align-items: center;
+    padding-right: 10px; }
+    @media (max-width: 460px) {
+      .footer__social {
+        padding-right: 0; } }
+    .footer__social-link + .footer__social-link {
+      margin-left: 60px; }
+      @media (max-width: 460px) {
+        .footer__social-link + .footer__social-link {
+          margin-left: 45px; } }
+    .footer__social-icon {
+      fill: #ffffff; }
+      .footer__social-icon--vk, .footer__social-icon--youtube {
+        width: 31px;
+        height: 31px; }
+      .footer__social-icon--inst {
+        width: 25px;
+        height: 25px; }
