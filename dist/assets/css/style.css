@@ -1941,7 +1941,7 @@ section {
 
 .intro {
     width: 100%;
-    background: url(/assets/images/intro/intro-bg.png) no-repeat center/cover;
+    background: url(../images/intro/intro-bg.png) no-repeat center/cover;
 }
 
 .intro__inner {
@@ -2120,7 +2120,7 @@ section {
     z-index: 1;
     width: 638px;
     height: 306px;
-    background: url(/assets/images/bg-lines.svg) no-repeat right;
+    background: url(../images/bg-lines.svg) no-repeat right;
 }
 
 @media (max-width: 850px) {
@@ -2363,7 +2363,7 @@ section {
 
 .order {
     position: relative;
-    background: url(/assets/images/rectangles.png) #24242e no-repeat bottom center;
+    background: url(../images/rectangles.png) #24242e no-repeat bottom center;
     padding: 50px 0;
 }
 
@@ -2412,7 +2412,7 @@ section {
     top: -30px;
     right: 100px;
     z-index: 1;
-    background: url(/assets/images/order/pipe.png) no-repeat;
+    background: url(../images/order/pipe.png) no-repeat;
 }
 
 @media (max-width: 1050px) {
@@ -2643,12 +2643,12 @@ section {
     transform: translateY(-50%);
     width: 23px;
     height: 23px;
-    background: url(/assets/images/clip.png) no-repeat center;
+    background: url(../images/clip.png) no-repeat center;
 }
 
 .order-price {
     padding: 85px 0;
-    background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right;
+    background: url(../images/rectangles.png) #24242e no-repeat bottom right;
 }
 
 @media (max-width: 850px) {
@@ -2710,7 +2710,7 @@ section {
 .order-repair {
     position: relative;
     padding: 85px 0;
-    background: url(/assets/images/order/repair-bg.png) #24242e no-repeat bottom right 250px;
+    background: url(../images/order/repair-bg.png) #24242e no-repeat bottom right 250px;
 }
 
 .order-repair::before {
@@ -2808,7 +2808,7 @@ section {
 
 .benefits {
     position: relative;
-    background: url(/assets/images/rectangles.png) #24242e no-repeat bottom right 250px;
+    background: url(../images/rectangles.png) #24242e no-repeat bottom right 250px;
 }
 
 @media (max-width: 1150px) {
@@ -2825,7 +2825,7 @@ section {
     z-index: 1;
     width: 638px;
     height: 306px;
-    background: url(/assets/images/benefits/benefits-lines.svg) no-repeat right;
+    background: url(../images/benefits/benefits-lines.svg) no-repeat right;
 }
 
 @media (max-width: 1150px) {
@@ -2926,7 +2926,7 @@ section {
 }
 
 .guarantee {
-    background: url(/assets/images/guarantee/guarantee-bg.png) no-repeat center right 25%;
+    background: url(../images/guarantee/guarantee-bg.png) no-repeat center right 25%;
 }
 
 @media (max-width: 850px) {
@@ -2990,7 +2990,7 @@ section {
     z-index: 1;
     width: 171px;
     height: 43px;
-    background: url(/assets/images/line-down.svg) no-repeat center;
+    background: url(../images/line-down.svg) no-repeat center;
 }
 
 @media (max-width: 1100px) {
@@ -3011,7 +3011,7 @@ section {
 
 .guarantee__item:nth-child(2)::after {
     top: -40px;
-    background: url(/assets/images/line-up.svg) no-repeat center;
+    background: url(../images/line-up.svg) no-repeat center;
 }
 
 .guarantee__item:last-child::after {
@@ -3281,7 +3281,7 @@ section {
     top: 0;
     left: 0;
     z-index: 1;
-    background: url(/assets/images/examples/price-icon.svg) no-repeat center;
+    background: url(../images/examples/price-icon.svg) no-repeat center;
 }
 
 .examples-item__total-time {
@@ -3289,7 +3289,7 @@ section {
 }
 
 .examples-item__total-time::before {
-    background: url(/assets/images/examples/time-icon.svg) no-repeat center;
+    background: url(../images/examples/time-icon.svg) no-repeat center;
 }
 
 .examples-item__total-text + .examples-item__total-text {
@@ -3568,7 +3568,7 @@ section {
     z-index: 1;
     width: 98px;
     height: 127px;
-    background: url(/assets/images/likes.svg) no-repeat top center;
+    background: url(../images/likes.svg) no-repeat top center;
 }
 
 @media (max-width: 900px) {
@@ -3717,7 +3717,7 @@ section {
     z-index: 1;
     width: 171px;
     height: 43px;
-    background: url(/assets/images/line-down.svg) no-repeat center;
+    background: url(../images/line-down.svg) no-repeat center;
 }
 
 @media (max-width: 1159px) {
@@ -3729,7 +3729,7 @@ section {
 .stages__item:nth-child(even)::after {
     top: -10px;
     left: 115px;
-    background: url(/assets/images/line-up.svg) no-repeat center;
+    background: url(../images/line-up.svg) no-repeat center;
 }
 
 @media (max-width: 1159px) {
@@ -3843,16 +3843,34 @@ section {
 
 .faq {
     padding-top: 0;
-    background: url(/assets/images/faq/faq-bg.png) no-repeat right 200px top 110px;
+    background: url(../images/faq/faq-bg.png) no-repeat right 200px top 110px;
+}
+
+@media (max-width: 1245px) {
+    .faq {
+        background: none;
+    }
 }
 
 .faq__item {
     position: relative;
     max-width: 850px;
     background-color: #f8f8f8;
-    padding: 20px 42px 23px;
+    padding: 20px 50px 23px 42px;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .faq__item {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .faq__item {
+        padding-right: 30px;
+    }
 }
 
 .faq__item.hidden::after {
@@ -3863,8 +3881,14 @@ section {
     width: 42px;
     height: 100%;
     cursor: pointer;
-    background: url(/assets/images/faq/arrow-down.svg) no-repeat center;
+    background: url(../images/faq/arrow-down.svg) no-repeat center;
     background-color: #24242e;
+}
+
+@media (max-width: 575px) {
+    .faq__item.hidden::after {
+        width: 25px;
+    }
 }
 
 .faq__item.open::after {
@@ -3875,10 +3899,16 @@ section {
     width: 42px;
     height: 100%;
     cursor: pointer;
-    background: url(/assets/images/faq/arrow-up.svg) no-repeat center;
+    background: url(../images/faq/arrow-up.svg) no-repeat center;
     background-color: #1e489b;
     -webkit-transform: background rotateY(22deg);
     transform: background rotateY(22deg);
+}
+
+@media (max-width: 575px) {
+    .faq__item.open::after {
+        width: 25px;
+    }
 }
 
 .faq__item-title {
@@ -3887,12 +3917,18 @@ section {
     line-height: 24px;
 }
 
+@media (max-width: 575px) {
+    .faq__item-title {
+        font-size: 18px;
+    }
+}
+
 .faq__item-text {
     max-width: 710px;
+    max-height: 0;
     font-size: 14px;
     line-height: 17px;
     margin-top: 0;
-    max-height: 0;
     overflow: hidden;
     transition: all 0.2s ease-out;
 }

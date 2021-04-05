@@ -113,6 +113,10 @@
       font-size: 18px;
       line-height: 27px;
       color: $white;
+
+      @include breakpoint($sm-bp) {
+        font-size: 16px;
+      }
     }
 
     @include breakpoint(1170px) {
@@ -138,6 +142,10 @@
       display: block;
 
       margin: 0 auto;
+    }
+
+    @include breakpoint($sm-bp) {
+      font-size: 16px;
     }
   }
 }
@@ -290,6 +298,16 @@
   background: url(../images/order/repair-bg.png) $black no-repeat bottom right
     250px;
 
+  @include breakpoint(850px) {
+    padding: 50px 0;
+
+    background-image: none;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 36px 0;
+  }
+
   &::before {
     content: "";
     width: 50px;
@@ -303,6 +321,10 @@
     background-color: $primary;
 
     transform: skewX(25deg);
+
+    @include breakpoint(850px) {
+      display: none;
+    }
   }
 
   &__inner {
@@ -335,5 +357,9 @@
     color: $white;
 
     margin-bottom: 25px;
+
+    @include breakpoint($sm-bp) {
+      font-size: 20px;
+    }
   }
 }

@@ -1945,6 +1945,11 @@ section {
       font-size: 18px;
       line-height: 27px;
       color: #ffffff; }
+      @media (max-width: 575px) {
+        .order__form-input::placeholder,
+        .order-photo__form-input::placeholder,
+        .order-price__form-input::placeholder {
+          font-size: 16px; } }
     @media (max-width: 1170px) {
       .order__form-input,
       .order-photo__form-input,
@@ -1968,6 +1973,11 @@ section {
       .order-price__form-btn {
         display: block;
         margin: 0 auto; } }
+    @media (max-width: 575px) {
+      .order__form-btn,
+      .order-photo__form-btn,
+      .order-price__form-btn {
+        font-size: 16px; } }
 
 .order-photo {
   padding-top: 90px; }
@@ -2069,6 +2079,13 @@ section {
   position: relative;
   padding: 85px 0;
   background: url(../images/order/repair-bg.png) #24242e no-repeat bottom right 250px; }
+  @media (max-width: 850px) {
+    .order-repair {
+      padding: 50px 0;
+      background-image: none; } }
+  @media (max-width: 575px) {
+    .order-repair {
+      padding: 36px 0; } }
   .order-repair::before {
     content: "";
     width: 50px;
@@ -2079,6 +2096,9 @@ section {
     z-index: 1;
     background-color: #1e489b;
     transform: skewX(25deg); }
+    @media (max-width: 850px) {
+      .order-repair::before {
+        display: none; } }
   .order-repair__inner {
     position: relative;
     display: flex;
@@ -2101,6 +2121,9 @@ section {
     line-height: 32px;
     color: #ffffff;
     margin-bottom: 25px; }
+    @media (max-width: 575px) {
+      .order-repair__title {
+        font-size: 20px; } }
 
 @media (max-width: 1150px) {
   .brands .slick-list {
