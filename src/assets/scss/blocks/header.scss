@@ -4,10 +4,17 @@
 
   width: 100%;
 
+  transition: all 0.2s linear;
+
   @include breakpoint(1100px) {
     display: block;
     background-color: $white;
   }
+}
+
+.header--bg-mobile {
+  background-color: $white;
+  box-shadow: 0px 5px 16px -15px #3e3e3e;
 }
 
 .header__inner {
@@ -98,10 +105,18 @@
         display: none;
       }
     }
-
     &:hover::before {
       transform: scaleX(1);
       transform-origin: bottom left;
+    }
+
+    &.active {
+      color: $primary;
+
+      @include breakpoint(1100px) {
+        color: $white;
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 
