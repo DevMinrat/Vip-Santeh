@@ -2862,6 +2862,9 @@ section {
 
 .contacts__inner {
   display: flex; }
+  @media (max-width: 700px) {
+    .contacts__inner {
+      flex-wrap: wrap; } }
 
 .contacts__item {
   display: flex;
@@ -2871,22 +2874,74 @@ section {
   height: 360px;
   background-color: #f8f8f8;
   padding: 49px 40px 51px; }
+  @media (max-width: 991px) {
+    .contacts__item {
+      height: 250px;
+      padding: 30px; } }
+  @media (max-width: 850px) {
+    .contacts__item {
+      height: auto; } }
+  @media (max-width: 800px) {
+    .contacts__item {
+      padding: 20px; } }
+  @media (max-width: 700px) {
+    .contacts__item {
+      background-color: unset;
+      flex-direction: row;
+      justify-content: start;
+      padding: 20px 15px 20px 0; } }
   .contacts__item + .contacts__item {
     margin-left: 30px; }
+    @media (max-width: 800px) {
+      .contacts__item + .contacts__item {
+        margin-left: 10px; } }
+    @media (max-width: 700px) {
+      .contacts__item + .contacts__item {
+        margin-left: 0;
+        margin-top: 15px; } }
   .contacts__item-icon {
     width: 80px;
     height: 80px;
     fill: transparent;
     stroke: #1e489b; }
+    @media (max-width: 991px) {
+      .contacts__item-icon {
+        width: 60px;
+        height: 60px; } }
+    @media (max-width: 800px) {
+      .contacts__item-icon {
+        width: 50px;
+        height: 50px; } }
+    @media (max-width: 575px) {
+      .contacts__item-icon {
+        width: 40px;
+        height: 40px; } }
   .contacts__item-text {
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 30px; }
+    @media (max-width: 991px) {
+      .contacts__item-text {
+        margin-bottom: 15px; } }
+    @media (max-width: 575px) {
+      .contacts__item-text {
+        margin-bottom: 5px; } }
   .contacts__item-link {
     font-size: 24px;
     line-height: 29px; }
+    @media (max-width: 991px) {
+      .contacts__item-link {
+        font-size: 18px; } }
     .contacts__item-link--mail, .contacts__item-link--site {
       color: #1e489b; }
+
+@media (max-width: 991px) {
+  .contacts__icon-wrapper {
+    margin-bottom: 15px; } }
+
+@media (max-width: 700px) {
+  .contacts__icon-wrapper {
+    margin-right: 35px; } }
 
 .footer {
   height: 145px;
