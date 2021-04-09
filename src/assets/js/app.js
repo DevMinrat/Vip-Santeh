@@ -100,12 +100,49 @@ window.addEventListener("DOMContentLoaded", () => {
   burgerMenu.addEventListener("click", mobileMenuOn);
 
   window.addEventListener("scroll", () => {
-    console.log(1);
     burgerMenu.classList.remove("menu-on");
     menu.style.height = null;
     menu.style.padding = null;
   });
+
+  //modal
+
+  const modalTrigger = document.querySelectorAll("[data-modal-call]"),
+    modal = document.querySelector(".modal"),
+    modalCloseBtn = document.querySelector("[data-close]");
+
+  function openModal() {
+    modal.classList.remove("hide");
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
+  modalTrigger.forEach((btn) => {
+    btn.addEventListener("click", openModal);
+  });
+
+  function closeModal() {
+    modal.classList.add("hide");
+    modal.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+
+  modalCloseBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape" && modal.classList.contains("show")) {
+      closeModal();
+    }
+  });
 });
+
+// menu scroll and
 
 var sections = $("section"),
   nav = $("nav"),

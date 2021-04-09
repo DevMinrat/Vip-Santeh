@@ -359,6 +359,13 @@
                 <path d="M9.71436 1.28564L2.00007 8.99993L9.71436 16.7142" stroke="#24242E" stroke-width="1.5" />
             </g>
         </symbol>
+    
+        <symbol id="cancel" viewBox="0 0 25 25">
+            <g>
+                <path
+                    d="m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853 84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147 171.147 171.147 84.853-84.853-171.148-171.148z" />
+            </g>
+        </symbol>
     </svg>
     <div class="page">
 
@@ -417,7 +424,7 @@
                         </a>
                     </div>
         
-                    <button class="mobile-menu__order-btn">Заказать звонок</button>
+                    <button class="mobile-menu__order-btn" data-modal-call>Заказать звонок</button>
                 </nav>
         
                 <div class="burger-menu">
@@ -426,7 +433,7 @@
         
                 <div class="header__call">
                     <a class="header__tel" href="tel:+74951082472">+7 (495) 108-24-72</a>
-                    <p class="header__call-order">Заказать звонок</p>
+                    <p class="header__call-order" data-modal-call>Заказать звонок</p>
                 </div>
             </div>
         </header>
@@ -477,7 +484,7 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="intro__btn">Заказать монтаж</button>
+                        <button class="intro__btn" data-modal-call>Заказать монтаж</button>
                     </div>
                 </div>
             </section>
@@ -499,7 +506,7 @@
                             </a>
                         </div>
                     </div>
-                    <button class="video__btn">Оставить заявку</button>
+                    <button class="video__btn" data-modal-call>Оставить заявку</button>
                 </div>
             </section>
             
@@ -1526,7 +1533,18 @@
                     </div>
                 </div>
             </section>
-
+            
+            <div class="modal">
+                <div class="modal__content">
+                    <img class="modal__icon-cancel" src="assets/images/cancel.svg" alt="" data-close>
+                    <h3 class="modal__title">Оставьте заявку и мы свяжемся с Вами в течени 10 минут</h3>
+                    <form class="modal__form" action="#">
+                        <input class="modal__form-input" type="text" placeholder="Введите имя" required>
+                        <input class="modal__form-input" type="text" placeholder="Введите Телефон" required>
+                        <button class=" modal__form-btn">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->

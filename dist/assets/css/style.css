@@ -1664,7 +1664,7 @@ section {
     position: fixed;
     z-index: 99;
     width: 100%;
-    transition: background-color 0.2s linear;
+    transition: all 0.2s linear;
 }
 
 @media (max-width: 1100px) {
@@ -1672,6 +1672,11 @@ section {
         display: block;
         background-color: #ffffff;
     }
+}
+
+.header--bg-mobile {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 16px -15px #3e3e3e;
 }
 
 .header__inner {
@@ -1774,6 +1779,17 @@ section {
     transform: scaleX(1);
     -webkit-transform-origin: bottom left;
     transform-origin: bottom left;
+}
+
+.menu__item-link.active {
+    color: #1e489b;
+}
+
+@media (max-width: 1100px) {
+    .menu__item-link.active {
+        color: #ffffff;
+        border-bottom: 1px solid #fff;
+    }
 }
 
 @media (max-width: 1100px) {

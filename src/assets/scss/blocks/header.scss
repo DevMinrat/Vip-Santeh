@@ -205,6 +205,7 @@
 
 .header__call {
   text-align: right;
+  cursor: pointer;
 
   @include breakpoint(1100px) {
     display: none;

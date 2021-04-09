@@ -59,3 +59,12 @@ a {
 @import "blocks/faq";
 @import "blocks/contacts";
 @import "blocks/footer";
+@import "blocks/modal";
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
