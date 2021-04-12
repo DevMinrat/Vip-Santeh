@@ -148,6 +148,13 @@
   }
 }
 
+.prev--reviews,
+.next--reviews {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
 .slick-dots {
   display: flex;
   justify-content: center;

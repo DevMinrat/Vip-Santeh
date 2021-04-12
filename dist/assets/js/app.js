@@ -8683,6 +8683,15 @@ $(function () {
     prevArrow: $(".prev--reviews"),
     nextArrow: $(".next--reviews"),
     dots: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 });
 window.addEventListener("DOMContentLoaded", function () {

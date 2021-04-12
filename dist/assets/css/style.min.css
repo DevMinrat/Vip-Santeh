@@ -565,6 +565,11 @@ a {
   .next--examples {
     left: 70px; } }
 
+@media (max-width: 575px) {
+  .prev--reviews,
+  .next--reviews {
+    display: none; } }
+
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -1867,7 +1872,6 @@ section {
         font-size: 27px;
         line-height: 32px; } }
   .advantages__item-text {
-    font-size: 16px;
     line-height: 19px; }
 
 .order {
@@ -2775,11 +2779,23 @@ section {
   padding-top: 60px; }
 
 .reviews__item {
-  display: flex !important;
+  display: grid !important;
+  grid-template-columns: auto auto;
+  grid-gap: 22px 35px;
   width: 50%;
   max-width: 555px;
   padding: 36px 45px;
   background-color: #f8f8f8; }
+  @media (max-width: 991px) {
+    .reviews__item {
+      max-width: 100%; } }
+  @media (max-width: 575px) {
+    .reviews__item {
+      grid-template-columns: 1fr 3fr; } }
+  @media (max-width: 450px) {
+    .reviews__item {
+      grid-gap: 22px 15px;
+      padding: 20px; } }
   .reviews__item-img {
     width: 92px;
     height: 92px;
@@ -2787,6 +2803,9 @@ section {
     border-radius: 50%; }
   .reviews__item-content {
     max-width: 315px; }
+    @media (max-width: 575px) {
+      .reviews__item-content {
+        align-self: center; } }
   .reviews__item-name {
     font-size: 24px;
     line-height: 29px;
@@ -2794,22 +2813,28 @@ section {
   .reviews__item-stars {
     width: 86px;
     height: 14px;
-    fill: #ffde67;
-    margin-bottom: 22px; }
+    fill: #ffde67; }
   .reviews__item-descr {
+    grid-column: 2 / 3;
     font-size: 14px;
     line-height: 17px; }
+    @media (max-width: 575px) {
+      .reviews__item-descr {
+        grid-column: 1 / 3; } }
 
 .reviews__img-wrapper {
+  grid-row: 1 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 112px;
   height: 112px;
   padding: 10px;
-  margin-right: 37px;
   border: 1px solid #000000;
   border-radius: 50%; }
+  @media (max-width: 575px) {
+    .reviews__img-wrapper {
+      grid-row: 1 / 2; } }
 
 .faq {
   padding-top: 0;
