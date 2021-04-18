@@ -3,18 +3,12 @@
 
   background-color: $black;
 
-  @include breakpoint($sm-bp) {
-  }
-
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include breakpoint($sm-bp) {
-    }
-
-    @include breakpoint(460px) {
+    @include breakpoint(600px) {
       flex-direction: column;
     }
   }
@@ -28,8 +22,8 @@
       align-items: start;
     }
 
-    @include breakpoint(460px) {
-      margin-bottom: 40px;
+    @include breakpoint(600px) {
+      margin-bottom: 20px;
 
       align-items: center;
     }
@@ -42,7 +36,7 @@
 
       fill: $white;
 
-      @include breakpoint(460px) {
+      @include breakpoint(600px) {
         width: 216px;
         height: 40px;
 
@@ -91,13 +85,26 @@
     }
   }
 
+  &__create {
+    margin-top: 12px;
+    padding: 0 30px;
+
+    font-size: 15px;
+    color: $white;
+    text-align: center;
+
+    @include breakpoint(600px) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__social {
     display: flex;
     align-items: center;
 
     padding-right: 10px;
 
-    @include breakpoint(460px) {
+    @include breakpoint(600px) {
       padding-right: 0;
     }
 
@@ -105,7 +112,7 @@
       & + & {
         margin-left: 60px;
 
-        @include breakpoint(460px) {
+        @include breakpoint(600px) {
           margin-left: 45px;
         }
       }
