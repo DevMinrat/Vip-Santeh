@@ -639,6 +639,13 @@ a:hover {
     }
 }
 
+@media (max-width: 575px) {
+    .prev--reviews,
+  .next--reviews {
+        display: none;
+    }
+}
+
 .slick-dots {
     display: -ms-flexbox;
     display: flex;
@@ -2832,6 +2839,7 @@ section {
 @media (max-width: 575px) {
     .order-repair__title {
         font-size: 20px;
+        line-height: 25px;
     }
 }
 
@@ -3865,12 +3873,32 @@ section {
 }
 
 .reviews__item {
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: grid !important;
+    grid-template-columns: auto auto;
+    grid-gap: 22px 35px;
     width: 50%;
     max-width: 555px;
     padding: 36px 45px;
     background-color: #f8f8f8;
+}
+
+@media (max-width: 991px) {
+    .reviews__item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .reviews__item {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .reviews__item {
+        grid-gap: 22px 15px;
+        padding: 20px;
+    }
 }
 
 .reviews__item-img {
@@ -3885,6 +3913,13 @@ section {
     max-width: 315px;
 }
 
+@media (max-width: 575px) {
+    .reviews__item-content {
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+}
+
 .reviews__item-name {
     font-size: 24px;
     line-height: 29px;
@@ -3895,15 +3930,22 @@ section {
     width: 86px;
     height: 14px;
     fill: #ffde67;
-    margin-bottom: 22px;
 }
 
 .reviews__item-descr {
+    grid-column: 2 / 3;
     font-size: 14px;
     line-height: 17px;
 }
 
+@media (max-width: 575px) {
+    .reviews__item-descr {
+        grid-column: 1 / 3;
+    }
+}
+
 .reviews__img-wrapper {
+    grid-row: 1 / 3;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -3913,9 +3955,14 @@ section {
     width: 112px;
     height: 112px;
     padding: 10px;
-    margin-right: 37px;
     border: 1px solid #000000;
     border-radius: 50%;
+}
+
+@media (max-width: 575px) {
+    .reviews__img-wrapper {
+        grid-row: 1 / 2;
+    }
 }
 
 .faq {
@@ -4322,6 +4369,12 @@ section {
     box-shadow: 0px 0px 30px #3e3e3e5c;
 }
 
+@media (max-width: 575px) {
+    .modal__content {
+        padding: 50px 35px;
+    }
+}
+
 .modal__title {
     max-width: 500px;
     font-family: "Circe-Bold", sans-serif;
@@ -4329,6 +4382,12 @@ section {
     font-size: 30px;
     text-align: center;
     margin: 0 auto 30px;
+}
+
+@media (max-width: 575px) {
+    .modal__title {
+        font-size: 25px;
+    }
 }
 
 .modal__form {
@@ -4351,6 +4410,7 @@ section {
 
 .modal__form-btn {
     display: block;
+    width: 100%;
     max-width: 263px;
     height: 70px;
     font-size: 18px;
@@ -4358,7 +4418,6 @@ section {
     color: #ffffff;
     background-color: #1e489b;
     border: none;
-    padding: 21px 60px;
     margin: 30px auto 0;
 }
 

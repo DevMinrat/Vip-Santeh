@@ -82,6 +82,9 @@
 .price-item__button-more {
   cursor: pointer;
 
+  border: none;
+  background-color: transparent;
+
   @include f700;
   font-size: 16px;
   line-height: 19px;

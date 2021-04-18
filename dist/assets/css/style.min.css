@@ -2142,7 +2142,8 @@ section {
     margin-bottom: 25px; }
     @media (max-width: 575px) {
       .order-repair__title {
-        font-size: 20px; } }
+        font-size: 20px;
+        line-height: 25px; } }
 
 @media (max-width: 1150px) {
   .brands .slick-list {
@@ -2397,6 +2398,8 @@ section {
 
 .price-item__button-more {
   cursor: pointer;
+  border: none;
+  background-color: transparent;
   font-family: "Circe-Bold", sans-serif;
   font-weight: 700;
   font-size: 16px;
